@@ -4,7 +4,7 @@
 	End Sub
 
 	Private Sub CreateAccountLink_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles CreateAccountLink.LinkClicked
-
+		CreateAccountForm.ShowDialog()
 	End Sub
 
 	Private Sub AboutUsLink_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles AboutUsLink.LinkClicked

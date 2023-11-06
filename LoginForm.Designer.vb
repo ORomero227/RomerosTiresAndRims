@@ -167,6 +167,7 @@ Partial Class LoginForm
 		Me.TxtPassword.ForeColor = System.Drawing.Color.White
 		Me.TxtPassword.Location = New System.Drawing.Point(127, 145)
 		Me.TxtPassword.Name = "TxtPassword"
+		Me.TxtPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
 		Me.TxtPassword.Size = New System.Drawing.Size(289, 30)
 		Me.TxtPassword.TabIndex = 2
 		'
@@ -228,7 +229,7 @@ Partial Class LoginForm
 		'
 		Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
 		Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-		Me.BackColor = System.Drawing.Color.Red
+		Me.BackColor = System.Drawing.Color.Black
 		Me.ClientSize = New System.Drawing.Size(1070, 553)
 		Me.Controls.Add(Me.SplitContainer1)
 		Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle

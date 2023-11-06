@@ -69,6 +69,7 @@ Partial Class AboutForm
 		'
 		'FlowLayoutPanel1
 		'
+		Me.FlowLayoutPanel1.BackgroundImage = CType(resources.GetObject("FlowLayoutPanel1.BackgroundImage"), System.Drawing.Image)
 		Me.FlowLayoutPanel1.Controls.Add(Me.Label1)
 		Me.FlowLayoutPanel1.Controls.Add(Me.Label2)
 		Me.FlowLayoutPanel1.Controls.Add(Me.Label3)
@@ -84,7 +85,9 @@ Partial Class AboutForm
 		'Label1
 		'
 		Me.Label1.Anchor = System.Windows.Forms.AnchorStyles.Top
+		Me.Label1.BackColor = System.Drawing.Color.Transparent
 		Me.Label1.Font = New System.Drawing.Font("Arial", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+		Me.Label1.ForeColor = System.Drawing.Color.White
 		Me.Label1.Location = New System.Drawing.Point(3, 10)
 		Me.Label1.Margin = New System.Windows.Forms.Padding(3, 10, 3, 0)
 		Me.Label1.Name = "Label1"
@@ -96,7 +99,9 @@ Partial Class AboutForm
 		'Label2
 		'
 		Me.Label2.Anchor = System.Windows.Forms.AnchorStyles.Top
+		Me.Label2.BackColor = System.Drawing.Color.Transparent
 		Me.Label2.Font = New System.Drawing.Font("Arial", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+		Me.Label2.ForeColor = System.Drawing.Color.White
 		Me.Label2.Location = New System.Drawing.Point(15, 75)
 		Me.Label2.Margin = New System.Windows.Forms.Padding(3, 10, 3, 0)
 		Me.Label2.Name = "Label2"
@@ -108,7 +113,9 @@ Partial Class AboutForm
 		'Label3
 		'
 		Me.Label3.Anchor = System.Windows.Forms.AnchorStyles.Top
+		Me.Label3.BackColor = System.Drawing.Color.Transparent
 		Me.Label3.Font = New System.Drawing.Font("Arial", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+		Me.Label3.ForeColor = System.Drawing.Color.White
 		Me.Label3.Location = New System.Drawing.Point(13, 122)
 		Me.Label3.Margin = New System.Windows.Forms.Padding(3, 10, 3, 0)
 		Me.Label3.Name = "Label3"
@@ -120,7 +127,9 @@ Partial Class AboutForm
 		'Label4
 		'
 		Me.Label4.Anchor = System.Windows.Forms.AnchorStyles.Top
+		Me.Label4.BackColor = System.Drawing.Color.Transparent
 		Me.Label4.Font = New System.Drawing.Font("Arial", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+		Me.Label4.ForeColor = System.Drawing.Color.White
 		Me.Label4.Location = New System.Drawing.Point(15, 188)
 		Me.Label4.Margin = New System.Windows.Forms.Padding(3, 30, 3, 0)
 		Me.Label4.Name = "Label4"
@@ -132,8 +141,10 @@ Partial Class AboutForm
 		'RichTextBox1
 		'
 		Me.RichTextBox1.Anchor = System.Windows.Forms.AnchorStyles.Top
+		Me.RichTextBox1.BackColor = System.Drawing.Color.Black
 		Me.RichTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None
 		Me.RichTextBox1.Font = New System.Drawing.Font("Arial", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+		Me.RichTextBox1.ForeColor = System.Drawing.Color.White
 		Me.RichTextBox1.Location = New System.Drawing.Point(15, 234)
 		Me.RichTextBox1.Margin = New System.Windows.Forms.Padding(3, 10, 3, 3)
 		Me.RichTextBox1.Name = "RichTextBox1"
@@ -146,6 +157,7 @@ Partial Class AboutForm
 		'
 		Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
 		Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+		Me.BackColor = System.Drawing.Color.Black
 		Me.ClientSize = New System.Drawing.Size(1093, 606)
 		Me.Controls.Add(Me.SplitContainer1)
 		Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
