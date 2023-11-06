@@ -190,7 +190,29 @@
 		_password = ""
 	End Sub
 
-	'Con parametros
+	'Cuando se crea desde el form de create account
+	Public Sub New(fName As String, pLastName As String, mLastName As String, userName As String,
+				   password As String, pAddres As String, mAddres As String, city As String, zipcode As String,
+				   cellNum As String, email As String, dept As String, spec As String, hireDate As Date)
+
+		_sellerId = Guid.NewGuid()
+		_firstName = fName
+		_paternalLastName = pLastName
+		_maternalLastName = mLastName
+		_physicalAddress = pAddres
+		_mailingAddress = mAddres
+		_city = city
+		_zipCode = zipcode
+		_cellularNumber = cellNum
+		_email = email
+		_department = dept
+		_specialization = spec
+		_hiringDate = hireDate
+		_username = userName
+		_password = password
+	End Sub
+
+	'Cuando se crea obteniendo desde una base de datos
 	Public Sub New(id As Guid, fName As String, pLastName As String, mLastName As String, userName As String,
 				   password As String, pAddres As String, mAddres As String, city As String, zipcode As String,
 				   cellNum As String, email As String, dept As String, spec As String, hireDate As Date)

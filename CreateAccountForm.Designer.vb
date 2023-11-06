@@ -113,7 +113,7 @@ Partial Class CreateAccountForm
 		Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35.0!))
 		Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35.0!))
 		Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
-		Me.TableLayoutPanel1.Size = New System.Drawing.Size(601, 548)
+		Me.TableLayoutPanel1.Size = New System.Drawing.Size(632, 548)
 		Me.TableLayoutPanel1.TabIndex = 0
 		'
 		'Label1
@@ -122,7 +122,7 @@ Partial Class CreateAccountForm
 		Me.Label1.Dock = System.Windows.Forms.DockStyle.Fill
 		Me.Label1.Location = New System.Drawing.Point(3, 0)
 		Me.Label1.Name = "Label1"
-		Me.Label1.Size = New System.Drawing.Size(264, 35)
+		Me.Label1.Size = New System.Drawing.Size(278, 35)
 		Me.Label1.TabIndex = 0
 		Me.Label1.Text = "Firstname:"
 		Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -130,25 +130,25 @@ Partial Class CreateAccountForm
 		'TxtFirstname
 		'
 		Me.TxtFirstname.Dock = System.Windows.Forms.DockStyle.Fill
-		Me.TxtFirstname.Location = New System.Drawing.Point(273, 3)
+		Me.TxtFirstname.Location = New System.Drawing.Point(287, 3)
 		Me.TxtFirstname.Name = "TxtFirstname"
-		Me.TxtFirstname.Size = New System.Drawing.Size(325, 28)
+		Me.TxtFirstname.Size = New System.Drawing.Size(342, 28)
 		Me.TxtFirstname.TabIndex = 1
 		'
 		'TxtPaternalLastname
 		'
 		Me.TxtPaternalLastname.Dock = System.Windows.Forms.DockStyle.Fill
-		Me.TxtPaternalLastname.Location = New System.Drawing.Point(273, 38)
+		Me.TxtPaternalLastname.Location = New System.Drawing.Point(287, 38)
 		Me.TxtPaternalLastname.Name = "TxtPaternalLastname"
-		Me.TxtPaternalLastname.Size = New System.Drawing.Size(325, 28)
+		Me.TxtPaternalLastname.Size = New System.Drawing.Size(342, 28)
 		Me.TxtPaternalLastname.TabIndex = 4
 		'
 		'TxtMaternalLastname
 		'
 		Me.TxtMaternalLastname.Dock = System.Windows.Forms.DockStyle.Fill
-		Me.TxtMaternalLastname.Location = New System.Drawing.Point(273, 73)
+		Me.TxtMaternalLastname.Location = New System.Drawing.Point(287, 73)
 		Me.TxtMaternalLastname.Name = "TxtMaternalLastname"
-		Me.TxtMaternalLastname.Size = New System.Drawing.Size(325, 28)
+		Me.TxtMaternalLastname.Size = New System.Drawing.Size(342, 28)
 		Me.TxtMaternalLastname.TabIndex = 5
 		'
 		'Label3
@@ -157,7 +157,7 @@ Partial Class CreateAccountForm
 		Me.Label3.Dock = System.Windows.Forms.DockStyle.Fill
 		Me.Label3.Location = New System.Drawing.Point(3, 35)
 		Me.Label3.Name = "Label3"
-		Me.Label3.Size = New System.Drawing.Size(264, 35)
+		Me.Label3.Size = New System.Drawing.Size(278, 35)
 		Me.Label3.TabIndex = 6
 		Me.Label3.Text = "Paternal Lastname:"
 		Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -168,7 +168,7 @@ Partial Class CreateAccountForm
 		Me.Label4.Dock = System.Windows.Forms.DockStyle.Fill
 		Me.Label4.Location = New System.Drawing.Point(3, 70)
 		Me.Label4.Name = "Label4"
-		Me.Label4.Size = New System.Drawing.Size(264, 35)
+		Me.Label4.Size = New System.Drawing.Size(278, 35)
 		Me.Label4.TabIndex = 7
 		Me.Label4.Text = "Maternal Lastname:"
 		Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -179,7 +179,7 @@ Partial Class CreateAccountForm
 		Me.Label5.Dock = System.Windows.Forms.DockStyle.Fill
 		Me.Label5.Location = New System.Drawing.Point(3, 105)
 		Me.Label5.Name = "Label5"
-		Me.Label5.Size = New System.Drawing.Size(264, 35)
+		Me.Label5.Size = New System.Drawing.Size(278, 35)
 		Me.Label5.TabIndex = 8
 		Me.Label5.Text = "Physical Address:"
 		Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -190,7 +190,7 @@ Partial Class CreateAccountForm
 		Me.Label6.Dock = System.Windows.Forms.DockStyle.Fill
 		Me.Label6.Location = New System.Drawing.Point(3, 140)
 		Me.Label6.Name = "Label6"
-		Me.Label6.Size = New System.Drawing.Size(264, 35)
+		Me.Label6.Size = New System.Drawing.Size(278, 35)
 		Me.Label6.TabIndex = 9
 		Me.Label6.Text = "Mailing Address:"
 		Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -201,7 +201,7 @@ Partial Class CreateAccountForm
 		Me.Label7.Dock = System.Windows.Forms.DockStyle.Fill
 		Me.Label7.Location = New System.Drawing.Point(3, 175)
 		Me.Label7.Name = "Label7"
-		Me.Label7.Size = New System.Drawing.Size(264, 35)
+		Me.Label7.Size = New System.Drawing.Size(278, 35)
 		Me.Label7.TabIndex = 10
 		Me.Label7.Text = "City:"
 		Me.Label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -212,7 +212,7 @@ Partial Class CreateAccountForm
 		Me.Label8.Dock = System.Windows.Forms.DockStyle.Fill
 		Me.Label8.Location = New System.Drawing.Point(3, 210)
 		Me.Label8.Name = "Label8"
-		Me.Label8.Size = New System.Drawing.Size(264, 35)
+		Me.Label8.Size = New System.Drawing.Size(278, 35)
 		Me.Label8.TabIndex = 11
 		Me.Label8.Text = "ZipCode:"
 		Me.Label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -223,7 +223,7 @@ Partial Class CreateAccountForm
 		Me.Label9.Dock = System.Windows.Forms.DockStyle.Fill
 		Me.Label9.Location = New System.Drawing.Point(3, 245)
 		Me.Label9.Name = "Label9"
-		Me.Label9.Size = New System.Drawing.Size(264, 35)
+		Me.Label9.Size = New System.Drawing.Size(278, 35)
 		Me.Label9.TabIndex = 12
 		Me.Label9.Text = "Cellular Number:"
 		Me.Label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -234,7 +234,7 @@ Partial Class CreateAccountForm
 		Me.Label10.Dock = System.Windows.Forms.DockStyle.Fill
 		Me.Label10.Location = New System.Drawing.Point(3, 280)
 		Me.Label10.Name = "Label10"
-		Me.Label10.Size = New System.Drawing.Size(264, 35)
+		Me.Label10.Size = New System.Drawing.Size(278, 35)
 		Me.Label10.TabIndex = 13
 		Me.Label10.Text = "Email:"
 		Me.Label10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -245,7 +245,7 @@ Partial Class CreateAccountForm
 		Me.Label11.Dock = System.Windows.Forms.DockStyle.Fill
 		Me.Label11.Location = New System.Drawing.Point(3, 315)
 		Me.Label11.Name = "Label11"
-		Me.Label11.Size = New System.Drawing.Size(264, 35)
+		Me.Label11.Size = New System.Drawing.Size(278, 35)
 		Me.Label11.TabIndex = 14
 		Me.Label11.Text = "Department:"
 		Me.Label11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -256,7 +256,7 @@ Partial Class CreateAccountForm
 		Me.Label12.Dock = System.Windows.Forms.DockStyle.Fill
 		Me.Label12.Location = New System.Drawing.Point(3, 350)
 		Me.Label12.Name = "Label12"
-		Me.Label12.Size = New System.Drawing.Size(264, 35)
+		Me.Label12.Size = New System.Drawing.Size(278, 35)
 		Me.Label12.TabIndex = 15
 		Me.Label12.Text = "Specialization:"
 		Me.Label12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -267,7 +267,7 @@ Partial Class CreateAccountForm
 		Me.Label13.Dock = System.Windows.Forms.DockStyle.Fill
 		Me.Label13.Location = New System.Drawing.Point(3, 385)
 		Me.Label13.Name = "Label13"
-		Me.Label13.Size = New System.Drawing.Size(264, 35)
+		Me.Label13.Size = New System.Drawing.Size(278, 35)
 		Me.Label13.TabIndex = 16
 		Me.Label13.Text = "Hiring Date:"
 		Me.Label13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -278,7 +278,7 @@ Partial Class CreateAccountForm
 		Me.Label14.Dock = System.Windows.Forms.DockStyle.Fill
 		Me.Label14.Location = New System.Drawing.Point(3, 420)
 		Me.Label14.Name = "Label14"
-		Me.Label14.Size = New System.Drawing.Size(264, 35)
+		Me.Label14.Size = New System.Drawing.Size(278, 35)
 		Me.Label14.TabIndex = 17
 		Me.Label14.Text = "Username:"
 		Me.Label14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -289,7 +289,7 @@ Partial Class CreateAccountForm
 		Me.Label15.Dock = System.Windows.Forms.DockStyle.Fill
 		Me.Label15.Location = New System.Drawing.Point(3, 455)
 		Me.Label15.Name = "Label15"
-		Me.Label15.Size = New System.Drawing.Size(264, 35)
+		Me.Label15.Size = New System.Drawing.Size(278, 35)
 		Me.Label15.TabIndex = 18
 		Me.Label15.Text = "Password:"
 		Me.Label15.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -297,78 +297,80 @@ Partial Class CreateAccountForm
 		'TxtPhysicalAddress
 		'
 		Me.TxtPhysicalAddress.Dock = System.Windows.Forms.DockStyle.Fill
-		Me.TxtPhysicalAddress.Location = New System.Drawing.Point(273, 108)
+		Me.TxtPhysicalAddress.Location = New System.Drawing.Point(287, 108)
 		Me.TxtPhysicalAddress.Name = "TxtPhysicalAddress"
-		Me.TxtPhysicalAddress.Size = New System.Drawing.Size(325, 28)
+		Me.TxtPhysicalAddress.Size = New System.Drawing.Size(342, 28)
 		Me.TxtPhysicalAddress.TabIndex = 19
 		'
 		'TxtMailingAddress
 		'
 		Me.TxtMailingAddress.Dock = System.Windows.Forms.DockStyle.Fill
-		Me.TxtMailingAddress.Location = New System.Drawing.Point(273, 143)
+		Me.TxtMailingAddress.Location = New System.Drawing.Point(287, 143)
 		Me.TxtMailingAddress.Name = "TxtMailingAddress"
-		Me.TxtMailingAddress.Size = New System.Drawing.Size(325, 28)
+		Me.TxtMailingAddress.Size = New System.Drawing.Size(342, 28)
 		Me.TxtMailingAddress.TabIndex = 20
 		'
 		'TxtCity
 		'
 		Me.TxtCity.Dock = System.Windows.Forms.DockStyle.Fill
-		Me.TxtCity.Location = New System.Drawing.Point(273, 178)
+		Me.TxtCity.Location = New System.Drawing.Point(287, 178)
 		Me.TxtCity.Name = "TxtCity"
-		Me.TxtCity.Size = New System.Drawing.Size(325, 28)
+		Me.TxtCity.Size = New System.Drawing.Size(342, 28)
 		Me.TxtCity.TabIndex = 21
 		'
 		'TxtZipCode
 		'
 		Me.TxtZipCode.Dock = System.Windows.Forms.DockStyle.Fill
-		Me.TxtZipCode.Location = New System.Drawing.Point(273, 213)
+		Me.TxtZipCode.Location = New System.Drawing.Point(287, 213)
 		Me.TxtZipCode.Name = "TxtZipCode"
-		Me.TxtZipCode.Size = New System.Drawing.Size(325, 28)
+		Me.TxtZipCode.Size = New System.Drawing.Size(342, 28)
 		Me.TxtZipCode.TabIndex = 22
 		'
 		'TxtEmail
 		'
 		Me.TxtEmail.Dock = System.Windows.Forms.DockStyle.Fill
-		Me.TxtEmail.Location = New System.Drawing.Point(273, 283)
+		Me.TxtEmail.Location = New System.Drawing.Point(287, 283)
 		Me.TxtEmail.Name = "TxtEmail"
-		Me.TxtEmail.Size = New System.Drawing.Size(325, 28)
+		Me.TxtEmail.Size = New System.Drawing.Size(342, 28)
 		Me.TxtEmail.TabIndex = 24
 		'
 		'HiringDatePicker
 		'
-		Me.HiringDatePicker.CustomFormat = "dd/MM/yyyy"
+		Me.HiringDatePicker.CustomFormat = ""
 		Me.HiringDatePicker.Dock = System.Windows.Forms.DockStyle.Fill
-		Me.HiringDatePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-		Me.HiringDatePicker.Location = New System.Drawing.Point(273, 388)
+		Me.HiringDatePicker.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+		Me.HiringDatePicker.Location = New System.Drawing.Point(287, 388)
+		Me.HiringDatePicker.MaxDate = New Date(2025, 12, 31, 0, 0, 0, 0)
+		Me.HiringDatePicker.MinDate = New Date(1900, 1, 1, 0, 0, 0, 0)
 		Me.HiringDatePicker.Name = "HiringDatePicker"
-		Me.HiringDatePicker.Size = New System.Drawing.Size(325, 28)
+		Me.HiringDatePicker.Size = New System.Drawing.Size(342, 28)
 		Me.HiringDatePicker.TabIndex = 27
-		Me.HiringDatePicker.Value = New Date(2023, 11, 5, 0, 0, 0, 0)
+		Me.HiringDatePicker.Value = New Date(2023, 11, 6, 0, 0, 0, 0)
 		'
 		'TxtUsername
 		'
 		Me.TxtUsername.Dock = System.Windows.Forms.DockStyle.Fill
-		Me.TxtUsername.Location = New System.Drawing.Point(273, 423)
+		Me.TxtUsername.Location = New System.Drawing.Point(287, 423)
 		Me.TxtUsername.Name = "TxtUsername"
-		Me.TxtUsername.Size = New System.Drawing.Size(325, 28)
+		Me.TxtUsername.Size = New System.Drawing.Size(342, 28)
 		Me.TxtUsername.TabIndex = 28
 		'
 		'TxtPassword
 		'
 		Me.TxtPassword.Dock = System.Windows.Forms.DockStyle.Fill
-		Me.TxtPassword.Location = New System.Drawing.Point(273, 458)
+		Me.TxtPassword.Location = New System.Drawing.Point(287, 458)
 		Me.TxtPassword.Name = "TxtPassword"
 		Me.TxtPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-		Me.TxtPassword.Size = New System.Drawing.Size(325, 28)
+		Me.TxtPassword.Size = New System.Drawing.Size(342, 28)
 		Me.TxtPassword.TabIndex = 29
 		'
 		'MTxtCellularNumber
 		'
 		Me.MTxtCellularNumber.Dock = System.Windows.Forms.DockStyle.Fill
-		Me.MTxtCellularNumber.Location = New System.Drawing.Point(273, 248)
+		Me.MTxtCellularNumber.Location = New System.Drawing.Point(287, 248)
 		Me.MTxtCellularNumber.Mask = "(999) 000-0000"
 		Me.MTxtCellularNumber.Name = "MTxtCellularNumber"
-		Me.MTxtCellularNumber.Size = New System.Drawing.Size(325, 28)
+		Me.MTxtCellularNumber.Size = New System.Drawing.Size(342, 28)
 		Me.MTxtCellularNumber.TabIndex = 23
 		'
 		'CmbBoxDepartment
@@ -376,9 +378,9 @@ Partial Class CreateAccountForm
 		Me.CmbBoxDepartment.Dock = System.Windows.Forms.DockStyle.Fill
 		Me.CmbBoxDepartment.FormattingEnabled = True
 		Me.CmbBoxDepartment.Items.AddRange(New Object() {"Rims", "Suspensions", "Tires"})
-		Me.CmbBoxDepartment.Location = New System.Drawing.Point(273, 318)
+		Me.CmbBoxDepartment.Location = New System.Drawing.Point(287, 318)
 		Me.CmbBoxDepartment.Name = "CmbBoxDepartment"
-		Me.CmbBoxDepartment.Size = New System.Drawing.Size(325, 29)
+		Me.CmbBoxDepartment.Size = New System.Drawing.Size(342, 29)
 		Me.CmbBoxDepartment.TabIndex = 25
 		Me.CmbBoxDepartment.Text = "Select Department:"
 		'
@@ -387,18 +389,18 @@ Partial Class CreateAccountForm
 		Me.CmbBoxSpecialization.Dock = System.Windows.Forms.DockStyle.Fill
 		Me.CmbBoxSpecialization.FormattingEnabled = True
 		Me.CmbBoxSpecialization.Items.AddRange(New Object() {"Custom Suspension Parts Advice", "High-Performance Tires", "Off-Road Tires", "Specific Car Rims", "Vintage Rim Collector"})
-		Me.CmbBoxSpecialization.Location = New System.Drawing.Point(273, 353)
+		Me.CmbBoxSpecialization.Location = New System.Drawing.Point(287, 353)
 		Me.CmbBoxSpecialization.Name = "CmbBoxSpecialization"
-		Me.CmbBoxSpecialization.Size = New System.Drawing.Size(325, 29)
+		Me.CmbBoxSpecialization.Size = New System.Drawing.Size(342, 29)
 		Me.CmbBoxSpecialization.TabIndex = 26
 		Me.CmbBoxSpecialization.Text = "Select Specialization:"
 		'
 		'BtnCreate
 		'
-		Me.BtnCreate.BackColor = System.Drawing.Color.LimeGreen
+		Me.BtnCreate.BackColor = System.Drawing.Color.DarkGreen
 		Me.BtnCreate.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
 		Me.BtnCreate.ForeColor = System.Drawing.Color.White
-		Me.BtnCreate.Location = New System.Drawing.Point(705, 170)
+		Me.BtnCreate.Location = New System.Drawing.Point(725, 161)
 		Me.BtnCreate.Name = "BtnCreate"
 		Me.BtnCreate.Size = New System.Drawing.Size(187, 48)
 		Me.BtnCreate.TabIndex = 1
@@ -407,9 +409,10 @@ Partial Class CreateAccountForm
 		'
 		'BtnReset
 		'
-		Me.BtnReset.BackColor = System.Drawing.Color.Gold
+		Me.BtnReset.BackColor = System.Drawing.Color.DarkRed
 		Me.BtnReset.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.BtnReset.Location = New System.Drawing.Point(705, 224)
+		Me.BtnReset.ForeColor = System.Drawing.Color.White
+		Me.BtnReset.Location = New System.Drawing.Point(725, 215)
 		Me.BtnReset.Name = "BtnReset"
 		Me.BtnReset.Size = New System.Drawing.Size(187, 48)
 		Me.BtnReset.TabIndex = 2
@@ -419,7 +422,7 @@ Partial Class CreateAccountForm
 		'BtnClose
 		'
 		Me.BtnClose.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.BtnClose.Location = New System.Drawing.Point(705, 278)
+		Me.BtnClose.Location = New System.Drawing.Point(725, 269)
 		Me.BtnClose.Name = "BtnClose"
 		Me.BtnClose.Size = New System.Drawing.Size(187, 48)
 		Me.BtnClose.TabIndex = 3

@@ -1,7 +1,18 @@
 ﻿Public Class CreateAccountForm
 
-	'Funciones
+	'Campos
+	Private _myDataBase As MyDataBase
+	Private _seller As Seller
 
+	'Constructor
+	Public Sub New(dbContext As MyDataBase)
+		InitializeComponent()
+
+		'Se inicialisa la base de datos
+		_myDataBase = dbContext
+	End Sub
+
+	'Funciones
 	'Funcion para vaciar los textbox
 	Public Sub ClearAllTextBoxes()
 		TxtFirstname.Clear()
@@ -20,77 +31,91 @@
 		TxtPassword.Clear()
 	End Sub
 
-	'Funcion para validar los textbox 
-	Public Function ValidateInputs(textBoxes As TextBox(), comboBoxes As ComboBox(), maskedTextbox As MaskedTextBox) As Boolean
+	'Funcion para validar los inputs
+	Public Function InputsAreInvalid() As Boolean
 
-		'Recorro el array que tiene los textBoxes
-		For Each box In textBoxes
-			If String.IsNullOrEmpty(box.Text.Trim()) Then
-				MessageBox.Show("Please, enter all the fields")
-				Return True
-				Exit For
-			End If
+		Dim validation As New MyValidations()
 
-			If box.Name = "TxtEmail" And Not box.Text.Contains("@") Then
-				MessageBox.Show("Please, enter a valid email")
-				Return True
-				Exit For
-			End If
-		Next
+		'Array que contiene todos los textbox del form
+		Dim textboxes() As TextBox = {TxtFirstname, TxtPaternalLastname, TxtMaternalLastname,
+									  TxtPhysicalAddress, TxtMailingAddress, TxtCity, TxtZipCode,
+									  TxtEmail, TxtUsername, TxtPassword}
+		'Validacion de los textbox
+		If validation.AreTextBoxesInvalid(textboxes) Then
+			MessageBox.Show("Please, enter all the fields")
+			Return True
+		End If
 
-		'Recorro el array que tiene los comboBoxes
-		For Each combox In comboBoxes
-			'Variable para ver si hay un item seleccionado
-			Dim isItemSelected As Boolean = False
-			'Recorro la lista de items del combobox
-			For Each item As Object In combox.Items
-				'Si el text es igual al de un item
-				If combox.Text = combox.GetItemText(item) Then
-					isItemSelected = True
-					Exit For
-				End If
-			Next
+		'Array que contiene todos los combobox
+		Dim comboboxes() As ComboBox = {CmbBoxDepartment, CmbBoxSpecialization}
+		'Validacion de los comboboxes
+		If validation.CheckComboBoxSelection(comboboxes) Then
+			MessageBox.Show("Verify the department or specialization field.")
+			Return True
+		End If
 
-			'Si no item seleccionado se marca como un error
-			If Not isItemSelected Then
-				MessageBox.Show("Verify the department or specialization field")
-				Return True
-			End If
-		Next
+		'Validacion del email
+		If validation.IsEmailInvalid(TxtEmail) Then
+			MessageBox.Show("Please, enter a valid email")
+			Return True
+		ElseIf _myDataBase.ListOfEmails.Contains(TxtEmail.Text) Then 'Verificar si ya el email esta en uso
+			MessageBox.Show("Email already in use. Please use a different email.")
+			Return True
+		End If
 
-		'Validacion del maskedTextBox
-		If Not maskedTextbox.MaskCompleted Then
-			MessageBox.Show("Fill or Verify the cellular phone number")
+		Dim maskedTextBox As MaskedTextBox = MTxtCellularNumber
+		'Validacion del cellular number
+		If validation.IsCellularNumberInvalid(MTxtCellularNumber) Then
+			MessageBox.Show("Fill or Verify the cellular phone number.")
+			Return True
+		End If
+
+		'Validacion del username
+		If _myDataBase.ListOfUsernames.Contains(TxtUsername.Text) Then
+			MessageBox.Show("Username already in use. Please use a different username.")
 			Return True
 		End If
 
 		Return False
 	End Function
 
-
-	'Eventos de los botones
 	'Boton de crear
 	Private Sub BtnCreate_Click(sender As Object, e As EventArgs) Handles BtnCreate.Click
+		'Guarda el resultado de la validacion
+		Dim areInputsInvalid As Boolean
 
-		'Guarda resultado de la validacion
-		Dim areFieldInvalids As Boolean
+		areInputsInvalid = InputsAreInvalid()
 
-		'Array que contiene todos los textbox del form
-		Dim textboxes() As TextBox =
-		{
-			TxtFirstname, TxtPaternalLastname, TxtMaternalLastname,
-			TxtPhysicalAddress, TxtMailingAddress, TxtCity, TxtZipCode,
-			TxtEmail, TxtUsername, TxtPassword
-		}
+		'Si los controles no son invalidos
+		If Not areInputsInvalid Then
+			'Inicializo el objeto seller
+			_seller = New Seller With
+			{
+				.FirstName = TxtFirstname.Text,
+				.PaternalLastName = TxtPaternalLastname.Text,
+				.MaternalLastName = TxtMaternalLastname.Text,
+				.PhysicalAddress = TxtPhysicalAddress.Text,
+				.MailingAddress = TxtMailingAddress.Text,
+				.City = TxtCity.Text,
+				.ZipCode = TxtZipCode.Text,
+				.CellularNumber = MTxtCellularNumber.Text,
+				.Email = TxtEmail.Text,
+				.Department = CmbBoxDepartment.Text,
+				.Specialization = CmbBoxSpecialization.Text,
+				.HiringDate = HiringDatePicker.Value,
+				.UserName = TxtUsername.Text,
+				.Password = TxtPassword.Text
+			}
 
-		'Array que contiene todos los combobox
-		Dim comboboxes() As ComboBox = {CmbBoxDepartment, CmbBoxSpecialization}
+			'Intenta crear la cuenta
+			Dim isAccountCreated As Boolean = _myDataBase.CreateSellerAccount(_seller)
 
-		'Se guarda el resultado de la validacion
-		areFieldInvalids = ValidateInputs(textboxes, comboboxes, MTxtCellularNumber)
+			If isAccountCreated Then
+				MessageBox.Show("Account Created!")
+				ClearAllTextBoxes()
+				Me.Close()
+			End If
 
-		If areFieldInvalids = False Then
-			MessageBox.Show("Account Created")
 		End If
 
 	End Sub
@@ -108,5 +133,4 @@
 
 		Me.Close()
 	End Sub
-
 End Class

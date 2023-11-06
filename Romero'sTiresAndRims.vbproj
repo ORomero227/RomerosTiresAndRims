@@ -85,6 +85,7 @@
     <Compile Include="CreateAccountForm.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="MyDataBase.vb" />
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -115,6 +116,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="Seller.vb" />
+    <Compile Include="MyValidations.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="AboutForm.resx">
