@@ -22,7 +22,6 @@ Partial Class CreateAccountForm
 	'Do not modify it using the code editor.
 	<System.Diagnostics.DebuggerStepThrough()>
 	Private Sub InitializeComponent()
-		Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(CreateAccountForm))
 		Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
 		Me.Label1 = New System.Windows.Forms.Label()
 		Me.TxtFirstname = New System.Windows.Forms.TextBox()
@@ -345,7 +344,7 @@ Partial Class CreateAccountForm
 		Me.HiringDatePicker.Name = "HiringDatePicker"
 		Me.HiringDatePicker.Size = New System.Drawing.Size(342, 28)
 		Me.HiringDatePicker.TabIndex = 27
-		Me.HiringDatePicker.Value = New Date(2023, 11, 6, 0, 0, 0, 0)
+		Me.HiringDatePicker.Value = New Date(2023, 11, 7, 0, 0, 0, 0)
 		'
 		'TxtUsername
 		'
@@ -397,7 +396,7 @@ Partial Class CreateAccountForm
 		'
 		'BtnCreate
 		'
-		Me.BtnCreate.BackColor = System.Drawing.Color.DarkGreen
+		Me.BtnCreate.BackColor = System.Drawing.Color.Blue
 		Me.BtnCreate.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
 		Me.BtnCreate.ForeColor = System.Drawing.Color.White
 		Me.BtnCreate.Location = New System.Drawing.Point(725, 161)
@@ -409,7 +408,7 @@ Partial Class CreateAccountForm
 		'
 		'BtnReset
 		'
-		Me.BtnReset.BackColor = System.Drawing.Color.DarkRed
+		Me.BtnReset.BackColor = System.Drawing.Color.Red
 		Me.BtnReset.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
 		Me.BtnReset.ForeColor = System.Drawing.Color.White
 		Me.BtnReset.Location = New System.Drawing.Point(725, 215)
@@ -433,8 +432,7 @@ Partial Class CreateAccountForm
 		'
 		Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
 		Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-		Me.BackColor = System.Drawing.SystemColors.Control
-		Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
+		Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(44, Byte), Integer), CType(CType(96, Byte), Integer))
 		Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
 		Me.ClientSize = New System.Drawing.Size(956, 592)
 		Me.Controls.Add(Me.BtnClose)

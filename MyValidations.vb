@@ -2,7 +2,6 @@
 
 	'Validacion para verificar los textbox
 	Public Function AreTextBoxesInvalid(ParamArray textBoxes As TextBox()) As Boolean
-
 		'Recorre todos los textbox del array
 		For Each box In textBoxes
 
@@ -18,7 +17,6 @@
 
 	'Validacion para verificar el email
 	Public Function IsEmailInvalid(emailTextBox As TextBox) As Boolean
-
 		'Si el textbox no contiene @ es invalido
 		If Not emailTextBox.Text.Contains("@") Then
 			Return True
@@ -29,7 +27,6 @@
 
 	'Validacion para verificar los combo box
 	Public Function CheckComboBoxSelection(ParamArray comboBoxes As ComboBox()) As Boolean
-
 		'Recorre el array que tiene los comboBoxes
 		For Each combox In comboBoxes
 
@@ -58,7 +55,6 @@
 
 	'Validacion para verificar el numero de celular
 	Public Function IsCellularNumberInvalid(cellularNumMaskedText As MaskedTextBox) As Boolean
-
 		'Si la mascara del textbox no esta completada se asume que esta vacio
 		If Not cellularNumMaskedText.MaskCompleted Then
 			Return True

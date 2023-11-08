@@ -70,6 +70,7 @@ Partial Class AboutForm
 		'FlowLayoutPanel1
 		'
 		Me.FlowLayoutPanel1.BackgroundImage = CType(resources.GetObject("FlowLayoutPanel1.BackgroundImage"), System.Drawing.Image)
+		Me.FlowLayoutPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
 		Me.FlowLayoutPanel1.Controls.Add(Me.Label1)
 		Me.FlowLayoutPanel1.Controls.Add(Me.Label2)
 		Me.FlowLayoutPanel1.Controls.Add(Me.Label3)
@@ -157,7 +158,7 @@ Partial Class AboutForm
 		'
 		Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
 		Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-		Me.BackColor = System.Drawing.Color.Black
+		Me.BackColor = System.Drawing.Color.White
 		Me.ClientSize = New System.Drawing.Size(1093, 606)
 		Me.Controls.Add(Me.SplitContainer1)
 		Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog

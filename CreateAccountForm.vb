@@ -33,7 +33,6 @@
 
 	'Funcion para validar los inputs
 	Public Function InputsAreInvalid() As Boolean
-
 		Dim validation As New MyValidations()
 
 		'Array que contiene todos los textbox del form
@@ -117,7 +116,6 @@
 			End If
 
 		End If
-
 	End Sub
 
 	'Boton de reiniciar los textbox
@@ -127,7 +125,6 @@
 
 	'Boton de cerrar el form
 	Private Sub BtnClose_Click(sender As Object, e As EventArgs) Handles BtnClose.Click
-
 		'Si los textbox tienen datos se borran
 		ClearAllTextBoxes()
 
