@@ -1,4 +1,7 @@
-﻿Public Class Seller
+﻿'Oscar Romero Barbosa
+'Y00592812
+'Programa: Romero's Tires And Rims
+Public Class Seller
 
 	'Campos
 	Private _sellerId As Guid

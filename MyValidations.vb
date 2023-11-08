@@ -1,4 +1,8 @@
-﻿Public Class MyValidations
+﻿'Oscar Romero Barbosa
+'Y00592812
+'Programa: Romero's Tires And Rims
+
+Public Class MyValidations
 
 	'Validacion para verificar los textbox
 	Public Function AreTextBoxesInvalid(ParamArray textBoxes As TextBox()) As Boolean

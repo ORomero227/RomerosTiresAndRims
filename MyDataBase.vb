@@ -1,4 +1,8 @@
-﻿Imports System.Data.SqlClient
+﻿'Oscar Romero Barbosa
+'Y00592812
+'Programa: Romero's Tires And Rims
+
+Imports System.Data.SqlClient
 Imports System.Globalization
 Imports System.Security
 
@@ -237,5 +241,7 @@ Public Class MyDataBase
 
 		Return False
 	End Function
+
+
 
 End Class

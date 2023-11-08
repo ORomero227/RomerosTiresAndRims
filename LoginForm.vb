@@ -1,4 +1,8 @@
-﻿Public Class LoginForm
+﻿'Oscar Romero Barbosa
+'Y00592812
+'Programa: Romero's Tires And Rims
+
+Public Class LoginForm
 	'Campos
 	Private _myDatabase As New MyDataBase()
 	Private _createAccountForm As CreateAccountForm
