@@ -67,4 +67,12 @@ Public Class MyValidations
 		Return False
 	End Function
 
+	'Validacion para verificar si la cantidad de cuota es valida
+	Public Function IsADecimalNumber(clientFeed As TextBox) As Boolean
+		Dim input As String = clientFeed.Text.Trim()
+		Dim validDouble As Double = 0.0
+
+		Return Double.TryParse(input, validDouble)
+	End Function
+
 End Class

@@ -2,18 +2,20 @@
 'Y00592812
 'Programa: Romero's Tires And Rims
 
-Public Class CreateAccountForm
+Public Class CreateClientForm
 
-	'Campos
-	Private _myDataBase As MyDataBase
+	Private _myDataBase As New MyDataBase()
+	Private _dashboard As DashboardForm
 	Private _seller As Seller
+	Private _client As Client
 
 	'Constructor
-	Public Sub New(dbContext As MyDataBase)
+	Public Sub New(seller As Seller, dashBoard As DashboardForm)
 		InitializeComponent()
 
 		'Se inicialisa la base de datos
-		_myDataBase = dbContext
+		_seller = seller
+		_dashboard = dashBoard
 	End Sub
 
 	'Funciones
@@ -26,13 +28,12 @@ Public Class CreateAccountForm
 		TxtMailingAddress.Clear()
 		TxtCity.Clear()
 		TxtZipCode.Clear()
+		TxtCompanyCity.Clear()
+		TxtCompanyName.Clear()
 		TxtEmail.Clear()
+		TxtClientFee.Clear()
 		MTxtCellularNumber.Clear()
-		CmbBoxDepartment.Text = "Select Department:"
-		CmbBoxSpecialization.Text = "Select Specialization:"
-		HiringDatePicker.Value = Date.Now
-		TxtUsername.Clear()
-		TxtPassword.Clear()
+		BirthDatePicker.Value = Date.Now
 	End Sub
 
 	'Funcion para validar los inputs
@@ -42,27 +43,16 @@ Public Class CreateAccountForm
 		'Array que contiene todos los textbox del form
 		Dim textboxes() As TextBox = {TxtFirstname, TxtPaternalLastname, TxtMaternalLastname,
 									  TxtPhysicalAddress, TxtMailingAddress, TxtCity, TxtZipCode,
-									  TxtEmail, TxtUsername, TxtPassword}
+									  TxtEmail, TxtClientFee, TxtCompanyName, TxtCompanyCity}
 		'Validacion de los textbox
 		If validation.AreTextBoxesInvalid(textboxes) Then
 			MessageBox.Show("Please, enter all the fields")
 			Return True
 		End If
 
-		'Array que contiene todos los combobox
-		Dim comboboxes() As ComboBox = {CmbBoxDepartment, CmbBoxSpecialization}
-		'Validacion de los comboboxes
-		If validation.CheckComboBoxSelection(comboboxes) Then
-			MessageBox.Show("Verify the department or specialization field.")
-			Return True
-		End If
-
-		'Validacion del email
-		If validation.IsEmailInvalid(TxtEmail) Then
-			MessageBox.Show("Please, enter a valid email")
-			Return True
-		ElseIf _myDataBase.ListOfEmails.Contains(TxtEmail.Text) Then 'Verificar si ya el email esta en uso
-			MessageBox.Show("Email already in use. Please use a different email.")
+		'Validacion si el client fee es un numero valido
+		If Not validation.IsADecimalNumber(TxtClientFee) Then
+			MessageBox.Show("Please, enter a valid fee")
 			Return True
 		End If
 
@@ -70,12 +60,6 @@ Public Class CreateAccountForm
 		'Validacion del cellular number
 		If validation.IsCellularNumberInvalid(MTxtCellularNumber) Then
 			MessageBox.Show("Fill or Verify the cellular phone number.")
-			Return True
-		End If
-
-		'Validacion del username
-		If _myDataBase.ListOfUsernames.Contains(TxtUsername.Text) Then
-			MessageBox.Show("Username already in use. Please use a different username.")
 			Return True
 		End If
 
@@ -92,7 +76,7 @@ Public Class CreateAccountForm
 		'Si los controles no son invalidos
 		If Not areInputsInvalid Then
 			'Inicializo el objeto seller
-			_seller = New Seller With
+			_client = New Client With
 			{
 				.FirstName = TxtFirstname.Text,
 				.PaternalLastName = TxtPaternalLastname.Text,
@@ -101,21 +85,25 @@ Public Class CreateAccountForm
 				.MailingAddress = TxtMailingAddress.Text,
 				.City = TxtCity.Text,
 				.ZipCode = TxtZipCode.Text,
+				.BirthDate = BirthDatePicker.Text,
 				.CellularNumber = MTxtCellularNumber.Text,
 				.Email = TxtEmail.Text,
-				.Department = CmbBoxDepartment.Text,
-				.Specialization = CmbBoxSpecialization.Text,
-				.HiringDate = HiringDatePicker.Value,
-				.UserName = TxtUsername.Text,
-				.Password = TxtPassword.Text
+				.CompanyName = TxtCompanyName.Text,
+				.CompanyCity = TxtCompanyCity.Text,
+				.ClientFee = CDec(TxtClientFee.Text),
+				.SellerId = _seller.SellerId
 			}
 
 			'Intenta crear la cuenta
-			Dim isAccountCreated As Boolean = _myDataBase.CreateSellerAccount(_seller)
+			Dim isAccountCreated As Boolean = _myDataBase.CreateClientAccount(_client, _seller.SellerId)
 
 			If isAccountCreated Then
-				MessageBox.Show("Account Created!")
+				MessageBox.Show("Client Added Successfully!")
+
 				ClearAllTextBoxes()
+
+				_dashboard.LoadClients()
+
 				Me.Close()
 			End If
 
@@ -134,4 +122,6 @@ Public Class CreateAccountForm
 
 		Me.Close()
 	End Sub
+
+
 End Class

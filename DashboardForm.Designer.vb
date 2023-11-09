@@ -33,13 +33,19 @@ Partial Class DashboardForm
 		Me.PanelBanner = New System.Windows.Forms.Panel()
 		Me.PictureBox1 = New System.Windows.Forms.PictureBox()
 		Me.PanelSearchBar = New System.Windows.Forms.Panel()
-		Me.TextBox1 = New System.Windows.Forms.TextBox()
 		Me.BtnSearch = New System.Windows.Forms.Button()
+		Me.TextBox1 = New System.Windows.Forms.TextBox()
+		Me.DataGridViewClients = New System.Windows.Forms.DataGridView()
+		Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+		Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+		Me.LblFullName = New System.Windows.Forms.Label()
 		Me.PanelSidebar.SuspendLayout()
 		Me.PanelWelcome.SuspendLayout()
 		Me.PanelBanner.SuspendLayout()
 		CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
 		Me.PanelSearchBar.SuspendLayout()
+		CType(Me.DataGridViewClients, System.ComponentModel.ISupportInitialize).BeginInit()
+		Me.GroupBox1.SuspendLayout()
 		Me.SuspendLayout()
 		'
 		'PanelSidebar
@@ -174,15 +180,6 @@ Partial Class DashboardForm
 		Me.PanelSearchBar.Size = New System.Drawing.Size(1140, 73)
 		Me.PanelSearchBar.TabIndex = 3
 		'
-		'TextBox1
-		'
-		Me.TextBox1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-		Me.TextBox1.Font = New System.Drawing.Font("Arial", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.TextBox1.Location = New System.Drawing.Point(690, 19)
-		Me.TextBox1.Name = "TextBox1"
-		Me.TextBox1.Size = New System.Drawing.Size(289, 28)
-		Me.TextBox1.TabIndex = 4
-		'
 		'BtnSearch
 		'
 		Me.BtnSearch.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
@@ -195,23 +192,89 @@ Partial Class DashboardForm
 		Me.BtnSearch.Text = "Search"
 		Me.BtnSearch.UseVisualStyleBackColor = True
 		'
+		'TextBox1
+		'
+		Me.TextBox1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+		Me.TextBox1.Font = New System.Drawing.Font("Arial", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+		Me.TextBox1.Location = New System.Drawing.Point(690, 19)
+		Me.TextBox1.Name = "TextBox1"
+		Me.TextBox1.Size = New System.Drawing.Size(289, 28)
+		Me.TextBox1.TabIndex = 4
+		'
+		'DataGridViewClients
+		'
+		Me.DataGridViewClients.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+			Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+		Me.DataGridViewClients.BackgroundColor = System.Drawing.Color.White
+		Me.DataGridViewClients.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+		Me.DataGridViewClients.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+		Me.DataGridViewClients.Location = New System.Drawing.Point(365, 79)
+		Me.DataGridViewClients.Name = "DataGridViewClients"
+		Me.DataGridViewClients.RowHeadersWidth = 51
+		Me.DataGridViewClients.RowTemplate.Height = 24
+		Me.DataGridViewClients.Size = New System.Drawing.Size(1115, 319)
+		Me.DataGridViewClients.TabIndex = 4
+		'
+		'GroupBox1
+		'
+		Me.GroupBox1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+			Or System.Windows.Forms.AnchorStyles.Left) _
+			Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+		Me.GroupBox1.Controls.Add(Me.LblFullName)
+		Me.GroupBox1.Font = New System.Drawing.Font("Arial", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+		Me.GroupBox1.Location = New System.Drawing.Point(363, 404)
+		Me.GroupBox1.Name = "GroupBox1"
+		Me.GroupBox1.Size = New System.Drawing.Size(524, 291)
+		Me.GroupBox1.TabIndex = 5
+		Me.GroupBox1.TabStop = False
+		Me.GroupBox1.Text = "Client Personal Info"
+		'
+		'GroupBox2
+		'
+		Me.GroupBox2.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+			Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+		Me.GroupBox2.Font = New System.Drawing.Font("Arial", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+		Me.GroupBox2.Location = New System.Drawing.Point(908, 404)
+		Me.GroupBox2.Name = "GroupBox2"
+		Me.GroupBox2.Size = New System.Drawing.Size(571, 290)
+		Me.GroupBox2.TabIndex = 6
+		Me.GroupBox2.TabStop = False
+		Me.GroupBox2.Text = "Client Compay Info"
+		'
+		'LblFullName
+		'
+		Me.LblFullName.AutoSize = True
+		Me.LblFullName.Dock = System.Windows.Forms.DockStyle.Top
+		Me.LblFullName.Location = New System.Drawing.Point(3, 24)
+		Me.LblFullName.Name = "LblFullName"
+		Me.LblFullName.Size = New System.Drawing.Size(130, 21)
+		Me.LblFullName.TabIndex = 0
+		Me.LblFullName.Text = "LabelFullName"
+		'
 		'DashboardForm
 		'
 		Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
 		Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
 		Me.BackColor = System.Drawing.SystemColors.Control
 		Me.ClientSize = New System.Drawing.Size(1492, 707)
+		Me.Controls.Add(Me.GroupBox2)
+		Me.Controls.Add(Me.GroupBox1)
+		Me.Controls.Add(Me.DataGridViewClients)
 		Me.Controls.Add(Me.PanelSearchBar)
 		Me.Controls.Add(Me.PanelSidebar)
+		Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
 		Me.Name = "DashboardForm"
-		Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
 		Me.Text = "DashBoard"
+		Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
 		Me.PanelSidebar.ResumeLayout(False)
 		Me.PanelWelcome.ResumeLayout(False)
 		Me.PanelBanner.ResumeLayout(False)
 		CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
 		Me.PanelSearchBar.ResumeLayout(False)
 		Me.PanelSearchBar.PerformLayout()
+		CType(Me.DataGridViewClients, System.ComponentModel.ISupportInitialize).EndInit()
+		Me.GroupBox1.ResumeLayout(False)
+		Me.GroupBox1.PerformLayout()
 		Me.ResumeLayout(False)
 
 	End Sub
@@ -228,4 +291,8 @@ Partial Class DashboardForm
 	Friend WithEvents PanelSearchBar As Panel
 	Friend WithEvents BtnSearch As Button
 	Friend WithEvents TextBox1 As TextBox
+	Friend WithEvents DataGridViewClients As DataGridView
+	Friend WithEvents GroupBox1 As GroupBox
+	Friend WithEvents GroupBox2 As GroupBox
+	Friend WithEvents LblFullName As Label
 End Class

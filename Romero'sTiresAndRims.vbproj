@@ -79,10 +79,17 @@
     <Compile Include="AboutForm.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CreateAccountForm.Designer.vb">
-      <DependentUpon>CreateAccountForm.vb</DependentUpon>
+    <Compile Include="Client.vb" />
+    <Compile Include="CreateClientForm.Designer.vb">
+      <DependentUpon>CreateClientForm.vb</DependentUpon>
     </Compile>
-    <Compile Include="CreateAccountForm.vb">
+    <Compile Include="CreateClientForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateSellerAccountForm.Designer.vb">
+      <DependentUpon>CreateSellerAccountForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CreateSellerAccountForm.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MyDataBase.vb" />
@@ -122,8 +129,11 @@
     <EmbeddedResource Include="AboutForm.resx">
       <DependentUpon>AboutForm.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CreateAccountForm.resx">
-      <DependentUpon>CreateAccountForm.vb</DependentUpon>
+    <EmbeddedResource Include="CreateClientForm.resx">
+      <DependentUpon>CreateClientForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreateSellerAccountForm.resx">
+      <DependentUpon>CreateSellerAccountForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DashboardForm.resx">
       <DependentUpon>DashboardForm.vb</DependentUpon>

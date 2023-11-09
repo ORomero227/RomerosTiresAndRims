@@ -11,5 +11,6 @@ C:\Users\oskal\Workspace\Visual Basic\Proyectos Con notas\Romero'sTiresAndRims\o
 C:\Users\oskal\Workspace\Visual Basic\Proyectos Con notas\Romero'sTiresAndRims\obj\Debug\Romero'sTiresAndRims.xml
 C:\Users\oskal\Workspace\Visual Basic\Proyectos Con notas\Romero'sTiresAndRims\obj\Debug\Romero'sTiresAndRims.pdb
 C:\Users\oskal\Workspace\Visual Basic\Proyectos Con notas\Romero'sTiresAndRims\obj\Debug\Romero_sTiresAndRims.LoginForm.resources
-C:\Users\oskal\Workspace\Visual Basic\Proyectos Con notas\Romero'sTiresAndRims\obj\Debug\Romero_sTiresAndRims.CreateAccountForm.resources
 C:\Users\oskal\Workspace\Visual Basic\Proyectos Con notas\Romero'sTiresAndRims\obj\Debug\Romero_sTiresAndRims.DashboardForm.resources
+C:\Users\oskal\Workspace\Visual Basic\Proyectos Con notas\Romero'sTiresAndRims\obj\Debug\Romero_sTiresAndRims.CreateSellerAccountForm.resources
+C:\Users\oskal\Workspace\Visual Basic\Proyectos Con notas\Romero'sTiresAndRims\obj\Debug\Romero_sTiresAndRims.CreateClientForm.resources

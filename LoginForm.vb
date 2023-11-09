@@ -5,7 +5,7 @@
 Public Class LoginForm
 	'Campos
 	Private _myDatabase As New MyDataBase()
-	Private _createAccountForm As CreateAccountForm
+	Private _createAccountForm As CreateSellerAccountForm
 	Private _dashBoard As DashboardForm
 
 	'Eventos de botones
@@ -38,7 +38,7 @@ Public Class LoginForm
 
 	'Enlace para crear cuenta
 	Private Sub CreateAccountLink_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles CreateAccountLink.LinkClicked
-		_createAccountForm = New CreateAccountForm(_myDatabase)
+		_createAccountForm = New CreateSellerAccountForm(_myDatabase)
 
 		_createAccountForm.ShowDialog()
 	End Sub
@@ -55,7 +55,7 @@ Public Class LoginForm
 
 	'Enlace para cambiar el password
 	Private Sub ResetPasswordLink_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles ResetPasswordLink.LinkClicked
-		Dim userName As String = ""
+		Dim userName As String
 		Dim newPassword As String = ""
 		Dim validNewPassword As Boolean
 		Dim seller As Seller
