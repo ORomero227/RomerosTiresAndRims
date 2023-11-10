@@ -203,7 +203,6 @@ Public Class MyDataBase
 			End Try
 		End Using
 
-
 		Return clients
 	End Function
 
@@ -466,6 +465,57 @@ Public Class MyDataBase
 		End Using
 
 		Return False
+	End Function
+
+	'Buscador de cliente
+	Public Function SearchClient(fullName As String) As List(Of Client)
+		Dim clients As New List(Of Client)
+		Dim query As String = "SELECT *
+							   FROM tblClients
+							   WHERE (FirstName + ' ' + Paternal_LastName + ' ' + Maternal_Lastname)
+							   LIKE @FullName"
+
+
+		Using _myConnection As New SqlConnection(_connectionString)
+
+			_myConnection.Open()
+
+			Try
+				Using command As New SqlCommand(query, _myConnection)
+
+					command.Parameters.AddWithValue("@FullName", "%" & fullName & "%")
+
+					Dim reader As SqlDataReader = command.ExecuteReader()
+
+					While reader.Read()
+
+						Dim client As New Client With {
+							.ClientId = reader("Client_Id"),
+							.FirstName = reader("FirstName").ToString(),
+							.PaternalLastName = reader("Paternal_LastName").ToString(),
+							.MaternalLastName = reader("Maternal_LastName").ToString(),
+							.PhysicalAddress = reader("Physical_Address").ToString(),
+							.MailingAddress = reader("Mailing_Address").ToString(),
+							.City = reader("City").ToString(),
+							.ZipCode = reader("ZipCode").ToString(),
+							.BirthDate = reader("Birth_Date").ToString(),
+							.CellularNumber = reader("Cellular_Number").ToString(),
+							.Email = reader("Email").ToString(),
+							.CompanyName = reader("Company_Name").ToString(),
+							.CompanyCity = reader("Company_City").ToString(),
+							.ClientFee = CDec(reader("Client_Fee")),
+							.SellerId = reader("Seller_Id")
+						}
+
+						clients.Add(client)
+					End While
+				End Using
+			Catch ex As Exception
+				MsgBox(ex.Message)
+			End Try
+		End Using
+
+		Return clients
 	End Function
 
 End Class

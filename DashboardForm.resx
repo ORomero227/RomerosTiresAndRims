@@ -272,4 +272,122 @@
         kGDfL6esauEAAAAASUVORK5CYII=
 </value>
   </data>
+  <metadata name="ClientId.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="FirstName.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="PaternalLastname.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="MaternalLastname.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="PhysicalAddress.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="MailingAddress.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="City.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Zipcode.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="BirthDate.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="CellularNumber.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Email.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="CompanyName.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="CompanyCity.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="ClientFee.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAICAAAAEAIACoEAAAFgAAACgAAAAgAAAAQAAAAAEAIAAAAAAAABAAAMMOAADDDgAAAAAAAAAA
+        AABgLAD/YCwA/2AsAP9gLAD/YCwA/2AsAP9gLAD/YCwA/2AsAP9gLAD/YCwA/2AsAP9gLAD/YCwA/2As
+        AP9gLAD/YCwA/2AsAP9gLAD/YCwA/2AsAP9gLAD/YCwA/2AsAP9gLAD/YCwA/2AsAP9gLAD/YCwA/2As
+        AP9gLAD/YCwA/2AsAP9gLAD/YCwA/2AsAP9gLAD/YCwA/2AsAP9gLAD/YCwA/2AsAP9gLAD/YCwA/2As
+        AP9gLAD/YCwA/2AsAP9gLAD/YCwA/2AsAP9gLAD/YCwA/2AsAP9gLAD/YCwA/2AsAP9gLAD/YCwA/2As
+        AP9gLAD/YCwA/2AsAP9gLAD/YCwA/2AsAP9gLAD/YCwA/2AsAP9gLAD/YCwA/2AsAP9gLAD/YCwA/2As
+        AP9gLAD/YCwA/2AsAP9gLAD/YCwA/2AsAP9gLAD/YCwA/2AsAP9gLAD/YCwA/2AsAP9gLAD/YCwA/2As
+        AP9gLAD/YCwA/2AsAP9gLAD/YCwA/2AsAP9gLAD/YCwA/2AsAP9gLAD/YCwA/2AsAP9gLAD/YCwA/2As
+        AP9gLAD/YCwA/2AsAP9gLAD/YCwA/2AsAP9gLAD/YCwA/2AsAP9gLAD/YCwA/2AsAP9gLAD/YCwA/2As
+        AP9gLAD/YCwA/2AsAP9gLAD/YCwA/2AsAP9gLAD/YCwA/2AsAP9gLAD/YCwA/2AsAP9gLAD/YCwA/2As
+        AP9gLAD/YCwA/2AsAP9gLAD/YCwA/2AsAP9gLAD/YCwA/2AsAP9gLAD/YCwA/2AsAP9gLAD/YCwA/2As
+        AP9gLAD/YCwA/2AsAP9gLAD/YCwA/2AsAP9gLAD/YCwA/2AsAP9gLAD/YCwA/2AsAP9gLAD/YCwA/2As
+        AP9gLAD/YCwA/2AsAP9gLAD/YCwA/2AsAP9gLAD/YCwA/2AsAP9gLAD/YCwA/2AsAP9gLAD/YCwA/2As
+        AP9gLAD/YCwA/2AsAP9gLAD/YCwA/2AsAP9gLAD/YCwA/2AsAP9gLAD/YCwA/2AsAP9gLAD/YCwA/2As
+        AP9gLAD/YCwA/2AsAP9gLAD/YCwA/2AsAP9gLAD/YCwA/2AsAP9gLAD/YCwA/2AsAP9gLAD/YCwA/2As
+        AP9gLAD/YCwA/2AsAP9gLAD/YCwA/2AsAP9gLAD/YCwA/2AsAP9gLAD/YCwA/2AsAP9gLAD/YCwA/2As
+        AP9gLAD/YCwA/2AsAP9gLAD/YCwA/2AsAP9gLAD/YCwA/2AsAP9gLAD/YCwA/2AsAP9gLAD/YCwA/2As
+        AP9gLAD/YCwA/2AsAP9gLAD/YCwA/2AsAP9gLAD/YCwA/2AsAP9gLAD/YCwA/2AsAP9gLAD/YCwA/2As
+        AP9gLAD/YCwA/2AsAP9gLAD/YCwA/2AsAP9gLAD/YCwA/2AsAP9gLAD/YCwA/2AsAP9gLAD/YCwA/2As
+        AP9gLAD/YCwA/2AsAP9gLAD/YCwA/2AsAP9gLAD/YCwA/2AsAP9gLAD/YCwA/2AsAP9gLAD/YCwA/2As
+        AP9gLAD/YCwA/2AsAP9gLAD/YCwA/2AsAP9gLAD/YCwA/2AsAP9gLAD/YCwA/2AsAP9gLAD/YCwA/2As
+        AP9fKwD/XysA/2AsAP9gLAD/YCsA/2AsAP9gLAD/YCwA/2AsAP9gKwD/YCwA/2AsAP9gLAD/YCwA/2As
+        AP9gLAD/YCwA/2AsAP9gLAD/YCwA/2AsAP9gLAD/YCwA/2AsAP9gLAD/YCwA/2AsAP9gLAD/YCwA/2As
+        AP9iLwT/ZTMI/2c1C/9nNQv/ZDEH/2c1Cv9nNQv/ZTMI/2UyB/9mNAr/ZzYM/2YzCf9gLAD/YCwA/2As
+        AP9gLAD/YCwA/2AsAP9gLAD/YCwA/2AsAP9gLAD/YCwA/2AsAP9gLAD/YCwA/2AsAP9gLAD/YCwA/2As
+        AP9gLAD/YS0B/3pOKf+JY0L/kW1O/4pkQ/94Syb/i2RE/5JvUf+BWDX/hV07/4xmRv+UclT/hFw6/2Iu
+        A/9gLAD/YCwA/2AsAP9gLAD/YCwA/2AsAP9gLAD/YCwA/2AsAP9gLAD/YCwA/2AsAP9gLAD/XysA/2As
+        AP9gLAD/YCwA/18rAP9gLAD/ZjQK/2Y0Cv9nNQz/ZjQK/2MwBP9kMQf/ZjQK/2UyCP9lMwn/ZjQK/2c1
+        C/9lMwn/XysA/2AsAP9gLAD/YCwA/18rAP9fKwD/YCwA/2AsAP9gLAD/YCwA/2AsAP9gLAD/YCwA/2Et
+        Af9nNQv/ZTII/2UyB/9jMAX/bz8X/2QyB/9iLwX/ZzUM/2c2Df9mNQz/Yi8D/2s6Ef9sPBP/Yy8F/2Y0
+        C/9lMgj/ZDEG/2MwBv9vPxf/YzEG/2ArAP9gLQH/azoR/2k3Dv9gLAD/YCwA/2AsAP9gLAD/YCwA/2As
+        AP9gLAD/ZjMJ/7SciP+6o5D/jWhI/5Z0WP+7pZL/oYNp/4JZN/++qZf/tJuH/7egjP92SSP/xLGh/6qO
+        d/9xQxz/t6CM/7qkkf+GXz7/nn5j/7ulkv+dfWL/YS0B/209Ff/Crp7/uaOP/2UyCP9gLAD/YCwA/2As
+        AP9gLAD/YCwA/2AsAP9kMQf/qY52/7aeif+BWDX/iWNC/6+Ufv+SblD/fFEt/62Tff+GXjz/rpR+/3FD
+        G/+ymYP/nn5k/2w8FP+tk3z/tJyH/3xRLf+Pakv/r5R+/45pSf9uPxf/cUIb/7Sbh/+ig2n/Yi8E/2As
+        AP9gLAD/YCwA/2AsAP9gLAD/YCwA/2AsAP9iLgP/Yi8D/2ArAP9gKwH/YzAF/2AsAf9gLQH/YSwC/18r
+        Af9jMQb/YS4C/2IuA/9lMwn/YzAF/2QxBv9jMAX/YS0B/2EtAv9jMQb/XysB/2EtAf9gLAD/YS4D/2Eu
+        Av9gLAD/YCwA/2AsAP9gLAD/YCwA/2AsAP9gLAD/YCwA/2AsAP9gLAD/YCwA/2AsAP9kMgf/ckQd/2Et
+        Av9jLwT/cEIa/3ZKJP9qOhH/XysA/3RGIP99UzD/e08r/3ZJJP9vQBj/dUki/2k4D/9nNQv/YCwA/2As
+        AP9gLAD/YCwA/2AsAP9gLAD/YCwA/2AsAP9gLAD/YCwA/2AsAP9gLAD/YCwA/2AsAP9gLAD/XysA/3BC
+        Gv98USz/c0Uf/3dLJf9sPBT/azsS/3FDHP9iLwT/bj4W/2k4Dv9qOhD/ZzUL/2IvA/9zRh//azsS/3NF
+        Hv9gKwD/YCwA/2AsAP9gLAD/YCwA/2AsAP9gLAD/YCwA/2AsAP9gLAD/YCwA/2AsAP9gLAD/YCwA/2As
+        AP9gLAD/ZTMI/3hMJ/+GXjz/iGBA/4ZePf9vPxf/eU4p/39VMf9zRR7/bDsS/3BBGv90RiD/dUgh/3pP
+        Kv9+UzD/aTgP/2ArAP9gLAD/YCwA/2AsAP9gLAD/YCwA/2AsAP9gLAD/YCwA/2AsAP9gLAD/YCwA/2As
+        AP9gLAD/YCwA/2AsAP9iLwP/ckQc/4FYNf+DWjj/imRE/41nSP+DWzn/fVMv/3RHIP9xQxz/cEEZ/2s7
+        E/9mNQr/aDYM/2QxBv9gLAD/YCwA/2AsAP9gLAD/YCwA/2AsAP9gLAD/YCwA/2AsAP9gLAD/YCwA/2As
+        AP9gLAD/YCwA/2AsAP9gLAD/YCwA/2AsAP9fKwD/XysA/2EtAv9kMQb/aDcN/24+Fv9xQxv/b0AY/2w8
+        FP9mNAr/YS0C/2AsAP9fKwD/YCwA/2AsAP9gLAD/YCwA/2AsAP9gLAD/YCwA/2AsAP9gLAD/YCwA/2As
+        AP9gLAD/YCwA/2AsAP9gLAD/YCwA/2AsAP9gLAD/YCwA/2AsAP9gLAD/YCwA/2AsAP9gKwD/XysA/18r
+        AP9fKwD/XysA/2ArAP9gLAD/YCwA/2AsAP9gLAD/YCwA/2AsAP9gLAD/YCwA/2AsAP9gLAD/YCwA/2As
+        AP9gLAD/YCwA/2AsAP9gLAD/YCwA/2AsAP9gLAD/YCwA/2AsAP9gLAD/YCwA/2AsAP9gLAD/YCwA/2As
+        AP9gLAD/YCwA/2AsAP9gLAD/YCwA/2AsAP9gLAD/YCwA/2AsAP9gLAD/YCwA/2AsAP9gLAD/YCwA/2As
+        AP9gLAD/YCwA/2AsAP9gLAD/YCwA/2AsAP9gLAD/YCwA/2AsAP9gLAD/YCwA/2AsAP9gLAD/YCwA/2As
+        AP9gLAD/YCwA/2AsAP9gLAD/YCwA/2AsAP9gLAD/YCwA/2AsAP9gLAD/YCwA/2AsAP9gLAD/YCwA/2As
+        AP9gLAD/YCwA/2AsAP9gLAD/YCwA/2AsAP9gLAD/YCwA/2AsAP9gLAD/YCwA/2AsAP9gLAD/YCwA/2As
+        AP9gLAD/YCwA/2AsAP9gLAD/YCwA/2AsAP9gLAD/YCwA/2AsAP9gLAD/YCwA/2AsAP9gLAD/YCwA/2As
+        AP9gLAD/YCwA/2AsAP9gLAD/YCwA/2AsAP9gLAD/YCwA/2AsAP9gLAD/YCwA/2AsAP9gLAD/YCwA/2As
+        AP9gLAD/YCwA/2AsAP9gLAD/YCwA/2AsAP9gLAD/YCwA/2AsAP9gLAD/YCwA/2AsAP9gLAD/YCwA/2As
+        AP9gLAD/YCwA/2AsAP9gLAD/YCwA/2AsAP9gLAD/YCwA/2AsAP9gLAD/YCwA/2AsAP9gLAD/YCwA/2As
+        AP9gLAD/YCwA/2AsAP9gLAD/YCwA/2AsAP9gLAD/YCwA/2AsAP9gLAD/YCwA/2AsAP9gLAD/YCwA/2As
+        AP9gLAD/YCwA/2AsAP9gLAD/YCwA/2AsAP9gLAD/YCwA/2AsAP9gLAD/YCwA/2AsAP9gLAD/YCwA/2As
+        AP9gLAD/YCwA/2AsAP9gLAD/YCwA/2AsAP9gLAD/YCwA/2AsAP9gLAD/YCwA/2AsAP9gLAD/YCwA/2As
+        AP9gLAD/YCwA/2AsAP9gLAD/YCwA/2AsAP9gLAD/YCwA/2AsAP9gLAD/YCwA/2AsAP9gLAD/YCwA/2As
+        AP9gLAD/YCwA/2AsAP9gLAD/YCwA/2AsAP9gLAD/YCwA/2AsAP9gLAD/YCwA/2AsAP9gLAD/YCwA/2As
+        AP9gLAD/YCwA/2AsAP9gLAD/YCwA/2AsAP9gLAD/YCwA/2AsAP9gLAD/YCwA/2AsAP9gLAD/YCwA/2As
+        AP9gLAD/YCwA/2AsAP9gLAD/YCwA/2AsAP9gLAD/YCwA/2AsAP9gLAD/YCwA/2AsAP9gLAD/YCwA/2As
+        AP9gLAD/YCwA/2AsAP9gLAD/YCwA/2AsAP9gLAD/YCwA/2AsAP9gLAD/YCwA/2AsAP9gLAD/YCwA/2As
+        AP9gLAD/YCwA/2AsAP9gLAD/YCwA/2AsAP9gLAD/YCwA/2AsAP9gLAD/YCwA/2AsAP9gLAD/YCwA/2As
+        AP9gLAD/YCwA/2AsAP9gLAD/YCwA/2AsAP9gLAD/YCwA/2AsAP9gLAD/YCwA/2AsAP9gLAD/YCwA/2As
+        AP9gLAD/YCwA/2AsAP9gLAD/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=
+</value>
+  </data>
 </root>

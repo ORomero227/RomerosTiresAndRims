@@ -22,6 +22,7 @@ Partial Class CreateSellerAccountForm
 	'Do not modify it using the code editor.
 	<System.Diagnostics.DebuggerStepThrough()>
 	Private Sub InitializeComponent()
+		Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(CreateSellerAccountForm))
 		Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
 		Me.Label1 = New System.Windows.Forms.Label()
 		Me.TxtFirstname = New System.Windows.Forms.TextBox()
@@ -471,6 +472,7 @@ Partial Class CreateSellerAccountForm
 		Me.Controls.Add(Me.Panel2)
 		Me.Controls.Add(Me.Panel1)
 		Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
+		Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
 		Me.MaximizeBox = False
 		Me.MinimizeBox = False
 		Me.Name = "CreateSellerAccountForm"

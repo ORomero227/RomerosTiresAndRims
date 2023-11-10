@@ -162,6 +162,7 @@ Partial Class AboutForm
 		Me.ClientSize = New System.Drawing.Size(1093, 606)
 		Me.Controls.Add(Me.SplitContainer1)
 		Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
+		Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
 		Me.MaximizeBox = False
 		Me.Name = "AboutForm"
 		Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen

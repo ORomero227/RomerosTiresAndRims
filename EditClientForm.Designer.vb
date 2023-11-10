@@ -22,6 +22,7 @@ Partial Class EditClientForm
 	'Do not modify it using the code editor.
 	<System.Diagnostics.DebuggerStepThrough()> _
 	Private Sub InitializeComponent()
+		Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(EditClientForm))
 		Me.Panel1 = New System.Windows.Forms.Panel()
 		Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
 		Me.Label1 = New System.Windows.Forms.Label()
@@ -439,6 +440,7 @@ Partial Class EditClientForm
 		Me.ClientSize = New System.Drawing.Size(956, 592)
 		Me.Controls.Add(Me.Panel2)
 		Me.Controls.Add(Me.Panel1)
+		Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
 		Me.Name = "EditClientForm"
 		Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
 		Me.Text = "Editing Client"
