@@ -80,16 +80,28 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Client.vb" />
-    <Compile Include="CreateClientForm.Designer.vb">
-      <DependentUpon>CreateClientForm.vb</DependentUpon>
+    <Compile Include="AddClientForm.Designer.vb">
+      <DependentUpon>AddClientForm.vb</DependentUpon>
     </Compile>
-    <Compile Include="CreateClientForm.vb">
+    <Compile Include="AddClientForm.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="CreateSellerAccountForm.Designer.vb">
       <DependentUpon>CreateSellerAccountForm.vb</DependentUpon>
     </Compile>
     <Compile Include="CreateSellerAccountForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditClientForm.Designer.vb">
+      <DependentUpon>EditClientForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="EditClientForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomComboBox.Designer.vb">
+      <DependentUpon>CustomComboBox.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CustomComboBox.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MyDataBase.vb" />
@@ -129,14 +141,17 @@
     <EmbeddedResource Include="AboutForm.resx">
       <DependentUpon>AboutForm.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CreateClientForm.resx">
-      <DependentUpon>CreateClientForm.vb</DependentUpon>
+    <EmbeddedResource Include="AddClientForm.resx">
+      <DependentUpon>AddClientForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CreateSellerAccountForm.resx">
       <DependentUpon>CreateSellerAccountForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DashboardForm.resx">
       <DependentUpon>DashboardForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditClientForm.resx">
+      <DependentUpon>EditClientForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.vb</DependentUpon>
@@ -146,6 +161,9 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomComboBox.resx">
+      <DependentUpon>CustomComboBox.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

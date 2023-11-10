@@ -115,23 +115,20 @@ Public Class CreateSellerAccountForm
 
 			If isAccountCreated Then
 				MessageBox.Show("Account Created!")
-				ClearAllTextBoxes()
+				ClearAllTextBoxes() 'Se vacian los textbox
 				Me.Close()
 			End If
-
 		End If
 	End Sub
 
 	'Boton de reiniciar los textbox
 	Private Sub BtnReset_Click(sender As Object, e As EventArgs) Handles BtnReset.Click
-		ClearAllTextBoxes()
+		ClearAllTextBoxes() 'Se vacian los textbox
 	End Sub
 
 	'Boton de cerrar el form
 	Private Sub BtnClose_Click(sender As Object, e As EventArgs) Handles BtnClose.Click
-		'Si los textbox tienen datos se borran
-		ClearAllTextBoxes()
-
+		ClearAllTextBoxes() 'Se vacian los textbox
 		Me.Close()
 	End Sub
 End Class

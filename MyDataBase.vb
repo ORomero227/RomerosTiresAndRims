@@ -3,12 +3,13 @@
 'Programa: Romero's Tires And Rims
 
 Imports System.Data.SqlClient
+Imports System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel
 
 Public Class MyDataBase
 	'Campos
 	Private ReadOnly _connectionString As String = "Data Source=OSCARLAPTOP\SQLOSCAR1;Initial Catalog=RomerosTiresAndRimsDB;User Id=sa; Password=oscarpr12"
-
 	Private _seller As Seller
+	Private _client As Client
 
 	'Obtiene los emails que ya han sido registrados
 	Public ReadOnly Property ListOfEmails As List(Of String)
@@ -206,8 +207,51 @@ Public Class MyDataBase
 		Return clients
 	End Function
 
-	'Obtener un cliente en especifico
+	'Obtener el cliente por el id
+	Public Function GetClientById(clientId As String) As Client
+		_client = Nothing
 
+		Dim query As String = "SELECT * 
+							   FROM tblClients
+							   WHERE tblClients.Client_Id = @Client_Id"
+
+		Using _myConnection As New SqlConnection(_connectionString)
+
+			_myConnection.Open()
+			Try
+				Using command As New SqlCommand(query, _myConnection)
+
+					command.Parameters.AddWithValue("@Client_Id", clientId)
+
+					Dim reader As SqlDataReader = command.ExecuteReader()
+
+					While reader.Read()
+						_client = New Client With {
+							.ClientId = reader("Client_Id"),
+							.FirstName = reader("FirstName").ToString(),
+							.PaternalLastName = reader("Paternal_LastName").ToString(),
+							.MaternalLastName = reader("Maternal_LastName").ToString(),
+							.PhysicalAddress = reader("Physical_Address").ToString(),
+							.MailingAddress = reader("Mailing_Address").ToString(),
+							.City = reader("City").ToString(),
+							.ZipCode = reader("ZipCode").ToString(),
+							.BirthDate = reader("Birth_Date").ToString(),
+							.CellularNumber = reader("Cellular_Number").ToString(),
+							.Email = reader("Email").ToString(),
+							.CompanyName = reader("Company_Name").ToString(),
+							.CompanyCity = reader("Company_City").ToString(),
+							.ClientFee = CDec(reader("Client_Fee")),
+							.SellerId = reader("Seller_Id")
+						}
+					End While
+				End Using
+			Catch ex As Exception
+				MsgBox(ex.Message)
+			End Try
+		End Using
+
+		Return _client
+	End Function
 
 	'Crear cuenta del vendedor
 	Public Function CreateSellerAccount(seller As Seller) As Boolean
@@ -346,6 +390,82 @@ Public Class MyDataBase
 		Return False
 	End Function
 
+	'Actualizar el cliente
+	Public Function UpdateClientInfo(client As Client) As Boolean
+		Dim query As String = "UPDATE tblClients
+							   SET FirstName = @FirstName,Paternal_LastName = @Paternal_LastName,
+								   Maternal_LastName = @Maternal_LastName,Physical_Address = @Physical_Address,
+								   Mailing_Address = @Mailing_Address,City = @City,ZipCode = @ZipCode,
+                                   Birth_Date = @Birth_Date,Cellular_Number = @Cellular_Number,Email = @Email,
+								   Company_Name = @Company_Name,Company_City = @Company_City,Client_Fee = @Client_Fee
+								WHERE Client_Id = @Client_Id"
 
+		Using _myConnection As New SqlConnection(_connectionString)
+
+			_myConnection.Open()
+
+			Dim transaction As SqlTransaction = _myConnection.BeginTransaction()
+
+			Try
+				Using command As New SqlCommand(query, _myConnection, transaction)
+					'Parametros con valores
+					command.Parameters.AddWithValue("@Client_Id", client.ClientId)
+					command.Parameters.AddWithValue("@FirstName", client.FirstName)
+					command.Parameters.AddWithValue("@Paternal_LastName", client.PaternalLastName)
+					command.Parameters.AddWithValue("@Maternal_LastName", client.MaternalLastName)
+					command.Parameters.AddWithValue("@Physical_Address", client.PhysicalAddress)
+					command.Parameters.AddWithValue("@Mailing_Address", client.MailingAddress)
+					command.Parameters.AddWithValue("@City", client.City)
+					command.Parameters.AddWithValue("@ZipCode", client.ZipCode)
+					command.Parameters.AddWithValue("@Birth_Date", client.BirthDate)
+					command.Parameters.AddWithValue("@Cellular_Number", client.CellularNumber)
+					command.Parameters.AddWithValue("@Email", client.Email)
+					command.Parameters.AddWithValue("@Company_Name", client.CompanyName)
+					command.Parameters.AddWithValue("@Company_City", client.CompanyCity)
+					command.Parameters.AddWithValue("@Client_Fee", client.ClientFee)
+
+					command.ExecuteNonQuery()
+				End Using
+
+				transaction.Commit()
+
+				Return True
+			Catch ex As Exception
+				MsgBox(ex.Message)
+				transaction.Rollback()
+			End Try
+		End Using
+
+		Return False
+	End Function
+
+	'Elimina el cliente
+	Public Function DeleteClient(clientId As String) As Boolean
+		Dim query As String = "DELETE FROM tblClients WHERE Client_Id = @Client_Id"
+
+		Using _myConnection As New SqlConnection(_connectionString)
+
+			_myConnection.Open()
+
+			Dim transaction As SqlTransaction = _myConnection.BeginTransaction()
+
+			Try
+				Using command As New SqlCommand(query, _myConnection, transaction)
+					command.Parameters.AddWithValue("@Client_Id", clientId)
+
+					command.ExecuteNonQuery()
+				End Using
+
+				transaction.Commit()
+
+				Return True
+			Catch ex As Exception
+				MsgBox(ex.Message)
+				transaction.Rollback()
+			End Try
+		End Using
+
+		Return False
+	End Function
 
 End Class

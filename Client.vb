@@ -172,8 +172,15 @@ Public Class Client
 		End Set
 	End Property
 
-	'Constructores
+	'Nombre completo
+	Public ReadOnly Property FullName As String
+		Get
+			Return $"{_firstName} {_paternalLastName} {_maternalLastName}"
+		End Get
+	End Property
 
+
+	'Constructores
 	'Default
 	Public Sub New()
 		_clientId = Guid.NewGuid()

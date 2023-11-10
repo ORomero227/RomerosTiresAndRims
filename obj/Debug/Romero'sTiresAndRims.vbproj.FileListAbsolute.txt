@@ -13,4 +13,6 @@ C:\Users\oskal\Workspace\Visual Basic\Proyectos Con notas\Romero'sTiresAndRims\o
 C:\Users\oskal\Workspace\Visual Basic\Proyectos Con notas\Romero'sTiresAndRims\obj\Debug\Romero_sTiresAndRims.LoginForm.resources
 C:\Users\oskal\Workspace\Visual Basic\Proyectos Con notas\Romero'sTiresAndRims\obj\Debug\Romero_sTiresAndRims.DashboardForm.resources
 C:\Users\oskal\Workspace\Visual Basic\Proyectos Con notas\Romero'sTiresAndRims\obj\Debug\Romero_sTiresAndRims.CreateSellerAccountForm.resources
-C:\Users\oskal\Workspace\Visual Basic\Proyectos Con notas\Romero'sTiresAndRims\obj\Debug\Romero_sTiresAndRims.CreateClientForm.resources
+C:\Users\oskal\Workspace\Visual Basic\Proyectos Con notas\Romero'sTiresAndRims\obj\Debug\Romero_sTiresAndRims.EditClientForm.resources
+C:\Users\oskal\Workspace\Visual Basic\Proyectos Con notas\Romero'sTiresAndRims\obj\Debug\Romero_sTiresAndRims.CustomComboBox.resources
+C:\Users\oskal\Workspace\Visual Basic\Proyectos Con notas\Romero'sTiresAndRims\obj\Debug\Romero_sTiresAndRims.AddClientForm.resources

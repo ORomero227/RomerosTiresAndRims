@@ -2,8 +2,8 @@
 'Y00592812
 'Programa: Romero's Tires And Rims
 
-Public Class CreateClientForm
-
+Public Class AddClientForm
+	'Campos
 	Private _myDataBase As New MyDataBase()
 	Private _dashboard As DashboardForm
 	Private _seller As Seller
@@ -67,7 +67,7 @@ Public Class CreateClientForm
 	End Function
 
 	'Boton de crear
-	Private Sub BtnCreate_Click(sender As Object, e As EventArgs) Handles BtnCreate.Click
+	Private Sub BtnCreate_Click(sender As Object, e As EventArgs) Handles BtnAdd.Click
 		'Guarda el resultado de la validacion
 		Dim areInputsInvalid As Boolean
 
@@ -99,29 +99,21 @@ Public Class CreateClientForm
 
 			If isAccountCreated Then
 				MessageBox.Show("Client Added Successfully!")
-
-				ClearAllTextBoxes()
-
-				_dashboard.LoadClients()
-
+				ClearAllTextBoxes() 'Se vacian los textbox
+				_dashboard.LoadClients() 'Se cargan los clientes 
 				Me.Close()
 			End If
-
 		End If
 	End Sub
 
 	'Boton de reiniciar los textbox
-	Private Sub BtnReset_Click(sender As Object, e As EventArgs) Handles BtnReset.Click
-		ClearAllTextBoxes()
+	Private Sub BtnClear_Click(sender As Object, e As EventArgs) Handles BtnClear.Click
+		ClearAllTextBoxes() 'Se vacian los textbox
 	End Sub
 
 	'Boton de cerrar el form
 	Private Sub BtnClose_Click(sender As Object, e As EventArgs) Handles BtnClose.Click
-		'Si los textbox tienen datos se borran
-		ClearAllTextBoxes()
-
+		ClearAllTextBoxes() 'Se vacian los textbox
 		Me.Close()
 	End Sub
-
-
 End Class

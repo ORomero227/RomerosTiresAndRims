@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class CreateClientForm
+Partial Class AddClientForm
 	Inherits System.Windows.Forms.Form
 
 	'Form overrides dispose to clean up the component list.
@@ -51,8 +51,8 @@ Partial Class CreateClientForm
 		Me.TxtCompanyName = New System.Windows.Forms.TextBox()
 		Me.TxtCompanyCity = New System.Windows.Forms.TextBox()
 		Me.Panel2 = New System.Windows.Forms.Panel()
-		Me.BtnCreate = New System.Windows.Forms.Button()
-		Me.BtnReset = New System.Windows.Forms.Button()
+		Me.BtnAdd = New System.Windows.Forms.Button()
+		Me.BtnClear = New System.Windows.Forms.Button()
 		Me.BtnClose = New System.Windows.Forms.Button()
 		Me.Panel1.SuspendLayout()
 		Me.TableLayoutPanel1.SuspendLayout()
@@ -382,8 +382,8 @@ Partial Class CreateClientForm
 		'
 		'Panel2
 		'
-		Me.Panel2.Controls.Add(Me.BtnCreate)
-		Me.Panel2.Controls.Add(Me.BtnReset)
+		Me.Panel2.Controls.Add(Me.BtnAdd)
+		Me.Panel2.Controls.Add(Me.BtnClear)
 		Me.Panel2.Controls.Add(Me.BtnClose)
 		Me.Panel2.Dock = System.Windows.Forms.DockStyle.Right
 		Me.Panel2.Location = New System.Drawing.Point(600, 0)
@@ -391,33 +391,33 @@ Partial Class CreateClientForm
 		Me.Panel2.Size = New System.Drawing.Size(356, 592)
 		Me.Panel2.TabIndex = 6
 		'
-		'BtnCreate
+		'BtnAdd
 		'
-		Me.BtnCreate.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+		Me.BtnAdd.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
 			Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-		Me.BtnCreate.BackColor = System.Drawing.Color.Blue
-		Me.BtnCreate.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.BtnCreate.ForeColor = System.Drawing.Color.White
-		Me.BtnCreate.Location = New System.Drawing.Point(55, 167)
-		Me.BtnCreate.Name = "BtnCreate"
-		Me.BtnCreate.Size = New System.Drawing.Size(273, 48)
-		Me.BtnCreate.TabIndex = 1
-		Me.BtnCreate.Text = "Create"
-		Me.BtnCreate.UseVisualStyleBackColor = False
+		Me.BtnAdd.BackColor = System.Drawing.Color.Blue
+		Me.BtnAdd.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+		Me.BtnAdd.ForeColor = System.Drawing.Color.White
+		Me.BtnAdd.Location = New System.Drawing.Point(55, 167)
+		Me.BtnAdd.Name = "BtnAdd"
+		Me.BtnAdd.Size = New System.Drawing.Size(273, 48)
+		Me.BtnAdd.TabIndex = 1
+		Me.BtnAdd.Text = "Add"
+		Me.BtnAdd.UseVisualStyleBackColor = False
 		'
-		'BtnReset
+		'BtnClear
 		'
-		Me.BtnReset.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+		Me.BtnClear.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
 			Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-		Me.BtnReset.BackColor = System.Drawing.Color.Red
-		Me.BtnReset.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.BtnReset.ForeColor = System.Drawing.Color.White
-		Me.BtnReset.Location = New System.Drawing.Point(55, 221)
-		Me.BtnReset.Name = "BtnReset"
-		Me.BtnReset.Size = New System.Drawing.Size(273, 48)
-		Me.BtnReset.TabIndex = 2
-		Me.BtnReset.Text = "Reset"
-		Me.BtnReset.UseVisualStyleBackColor = False
+		Me.BtnClear.BackColor = System.Drawing.Color.Red
+		Me.BtnClear.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+		Me.BtnClear.ForeColor = System.Drawing.Color.White
+		Me.BtnClear.Location = New System.Drawing.Point(55, 221)
+		Me.BtnClear.Name = "BtnClear"
+		Me.BtnClear.Size = New System.Drawing.Size(273, 48)
+		Me.BtnClear.TabIndex = 2
+		Me.BtnClear.Text = "Clear"
+		Me.BtnClear.UseVisualStyleBackColor = False
 		'
 		'BtnClose
 		'
@@ -431,7 +431,7 @@ Partial Class CreateClientForm
 		Me.BtnClose.Text = "Close"
 		Me.BtnClose.UseVisualStyleBackColor = True
 		'
-		'CreateClientForm
+		'AddClientForm
 		'
 		Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
 		Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -441,7 +441,7 @@ Partial Class CreateClientForm
 		Me.Controls.Add(Me.Panel1)
 		Me.MaximizeBox = False
 		Me.MinimizeBox = False
-		Me.Name = "CreateClientForm"
+		Me.Name = "AddClientForm"
 		Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
 		Me.Text = "Adding New Client"
 		Me.Panel1.ResumeLayout(False)
@@ -479,8 +479,8 @@ Partial Class CreateClientForm
 	Friend WithEvents TxtClientFee As TextBox
 	Friend WithEvents MTxtCellularNumber As MaskedTextBox
 	Friend WithEvents Panel2 As Panel
-	Friend WithEvents BtnCreate As Button
-	Friend WithEvents BtnReset As Button
+	Friend WithEvents BtnAdd As Button
+	Friend WithEvents BtnClear As Button
 	Friend WithEvents BtnClose As Button
 	Friend WithEvents TxtCompanyName As TextBox
 	Friend WithEvents TxtCompanyCity As TextBox
