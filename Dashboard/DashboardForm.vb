@@ -159,5 +159,7 @@ Public Class DashboardForm
 		LblClientFee.Text = "$"
 	End Sub
 
-
+	Private Sub BtnClearGroupBoxes_Click(sender As Object, e As EventArgs) Handles BtnClearGroupBoxes.Click
+		ClearGroupBoxInfo()
+	End Sub
 End Class

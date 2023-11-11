@@ -248,7 +248,7 @@ Partial Class LoginForm
 		Me.BackColor = System.Drawing.SystemColors.Control
 		Me.ClientSize = New System.Drawing.Size(1090, 639)
 		Me.Controls.Add(Me.SplitContainer1)
-		Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+		Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
 		Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
 		Me.MaximizeBox = False
 		Me.Name = "LoginForm"

@@ -28,6 +28,7 @@ Partial Class DashboardForm
 		Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
 		Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
 		Me.PanelSidebar = New System.Windows.Forms.Panel()
+		Me.BtnSettings = New System.Windows.Forms.Button()
 		Me.BtnDeleteClient = New System.Windows.Forms.Button()
 		Me.BtnEditClient = New System.Windows.Forms.Button()
 		Me.BtnAddClient = New System.Windows.Forms.Button()
@@ -40,21 +41,6 @@ Partial Class DashboardForm
 		Me.TxtSearchBar = New System.Windows.Forms.TextBox()
 		Me.Label1 = New System.Windows.Forms.Label()
 		Me.DataGridViewClients = New System.Windows.Forms.DataGridView()
-		Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-		Me.LblEmail = New System.Windows.Forms.Label()
-		Me.LblCellularNumber = New System.Windows.Forms.Label()
-		Me.LblZipcode = New System.Windows.Forms.Label()
-		Me.LblCity = New System.Windows.Forms.Label()
-		Me.LblMailingAddress = New System.Windows.Forms.Label()
-		Me.LblPhysicalAddress = New System.Windows.Forms.Label()
-		Me.LblBirthDate = New System.Windows.Forms.Label()
-		Me.LblFullName = New System.Windows.Forms.Label()
-		Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
-		Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-		Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
-		Me.LblClientFee = New System.Windows.Forms.Label()
-		Me.LblCompanyCity = New System.Windows.Forms.Label()
-		Me.LblCompanyName = New System.Windows.Forms.Label()
 		Me.ClientId = New System.Windows.Forms.DataGridViewTextBoxColumn()
 		Me.FirstName = New System.Windows.Forms.DataGridViewTextBoxColumn()
 		Me.PaternalLastname = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -69,7 +55,16 @@ Partial Class DashboardForm
 		Me.CompanyName = New System.Windows.Forms.DataGridViewTextBoxColumn()
 		Me.CompanyCity = New System.Windows.Forms.DataGridViewTextBoxColumn()
 		Me.ClientFee = New System.Windows.Forms.DataGridViewTextBoxColumn()
-		Me.Label2 = New System.Windows.Forms.Label()
+		Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+		Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
+		Me.LblFullName = New System.Windows.Forms.Label()
+		Me.LblPhysicalAddress = New System.Windows.Forms.Label()
+		Me.LblMailingAddress = New System.Windows.Forms.Label()
+		Me.LblCity = New System.Windows.Forms.Label()
+		Me.LblZipcode = New System.Windows.Forms.Label()
+		Me.LblBirthDate = New System.Windows.Forms.Label()
+		Me.LblCellularNumber = New System.Windows.Forms.Label()
+		Me.LblEmail = New System.Windows.Forms.Label()
 		Me.Label4 = New System.Windows.Forms.Label()
 		Me.Label6 = New System.Windows.Forms.Label()
 		Me.Label8 = New System.Windows.Forms.Label()
@@ -77,10 +72,16 @@ Partial Class DashboardForm
 		Me.Label11 = New System.Windows.Forms.Label()
 		Me.Label12 = New System.Windows.Forms.Label()
 		Me.Label13 = New System.Windows.Forms.Label()
+		Me.Label2 = New System.Windows.Forms.Label()
+		Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+		Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
+		Me.LblClientFee = New System.Windows.Forms.Label()
+		Me.LblCompanyCity = New System.Windows.Forms.Label()
+		Me.LblCompanyName = New System.Windows.Forms.Label()
 		Me.Label3 = New System.Windows.Forms.Label()
 		Me.Label5 = New System.Windows.Forms.Label()
 		Me.Label7 = New System.Windows.Forms.Label()
-		Me.BtnSettings = New System.Windows.Forms.Button()
+		Me.BtnClearGroupBoxes = New System.Windows.Forms.Button()
 		Me.PanelSidebar.SuspendLayout()
 		Me.PanelWelcome.SuspendLayout()
 		Me.PanelBanner.SuspendLayout()
@@ -107,6 +108,22 @@ Partial Class DashboardForm
 		Me.PanelSidebar.Name = "PanelSidebar"
 		Me.PanelSidebar.Size = New System.Drawing.Size(305, 869)
 		Me.PanelSidebar.TabIndex = 0
+		'
+		'BtnSettings
+		'
+		Me.BtnSettings.BackColor = System.Drawing.Color.Transparent
+		Me.BtnSettings.Dock = System.Windows.Forms.DockStyle.Bottom
+		Me.BtnSettings.FlatAppearance.BorderSize = 0
+		Me.BtnSettings.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gold
+		Me.BtnSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+		Me.BtnSettings.Font = New System.Drawing.Font("Arial", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+		Me.BtnSettings.ForeColor = System.Drawing.Color.White
+		Me.BtnSettings.Location = New System.Drawing.Point(0, 823)
+		Me.BtnSettings.Name = "BtnSettings"
+		Me.BtnSettings.Size = New System.Drawing.Size(305, 46)
+		Me.BtnSettings.TabIndex = 5
+		Me.BtnSettings.Text = "Settings"
+		Me.BtnSettings.UseVisualStyleBackColor = False
 		'
 		'BtnDeleteClient
 		'
@@ -302,230 +319,6 @@ Partial Class DashboardForm
 		Me.DataGridViewClients.Size = New System.Drawing.Size(1091, 391)
 		Me.DataGridViewClients.TabIndex = 45
 		'
-		'GroupBox1
-		'
-		Me.GroupBox1.Controls.Add(Me.TableLayoutPanel1)
-		Me.GroupBox1.Font = New System.Drawing.Font("Arial", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.GroupBox1.Location = New System.Drawing.Point(324, 476)
-		Me.GroupBox1.Name = "GroupBox1"
-		Me.GroupBox1.Size = New System.Drawing.Size(551, 381)
-		Me.GroupBox1.TabIndex = 46
-		Me.GroupBox1.TabStop = False
-		Me.GroupBox1.Text = "Client Personal Info"
-		'
-		'LblEmail
-		'
-		Me.LblEmail.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(44, Byte), Integer), CType(CType(96, Byte), Integer))
-		Me.LblEmail.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-		Me.LblEmail.Dock = System.Windows.Forms.DockStyle.Fill
-		Me.LblEmail.ForeColor = System.Drawing.Color.White
-		Me.LblEmail.Location = New System.Drawing.Point(248, 264)
-		Me.LblEmail.Name = "LblEmail"
-		Me.LblEmail.Size = New System.Drawing.Size(275, 38)
-		Me.LblEmail.TabIndex = 7
-		Me.LblEmail.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-		'
-		'LblCellularNumber
-		'
-		Me.LblCellularNumber.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(44, Byte), Integer), CType(CType(96, Byte), Integer))
-		Me.LblCellularNumber.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-		Me.LblCellularNumber.Dock = System.Windows.Forms.DockStyle.Fill
-		Me.LblCellularNumber.ForeColor = System.Drawing.Color.White
-		Me.LblCellularNumber.Location = New System.Drawing.Point(248, 226)
-		Me.LblCellularNumber.Name = "LblCellularNumber"
-		Me.LblCellularNumber.Size = New System.Drawing.Size(275, 38)
-		Me.LblCellularNumber.TabIndex = 6
-		Me.LblCellularNumber.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-		'
-		'LblZipcode
-		'
-		Me.LblZipcode.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(44, Byte), Integer), CType(CType(96, Byte), Integer))
-		Me.LblZipcode.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-		Me.LblZipcode.Dock = System.Windows.Forms.DockStyle.Fill
-		Me.LblZipcode.ForeColor = System.Drawing.Color.White
-		Me.LblZipcode.Location = New System.Drawing.Point(248, 151)
-		Me.LblZipcode.Name = "LblZipcode"
-		Me.LblZipcode.Size = New System.Drawing.Size(275, 38)
-		Me.LblZipcode.TabIndex = 5
-		Me.LblZipcode.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-		'
-		'LblCity
-		'
-		Me.LblCity.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(44, Byte), Integer), CType(CType(96, Byte), Integer))
-		Me.LblCity.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-		Me.LblCity.Dock = System.Windows.Forms.DockStyle.Fill
-		Me.LblCity.ForeColor = System.Drawing.Color.White
-		Me.LblCity.Location = New System.Drawing.Point(248, 113)
-		Me.LblCity.Name = "LblCity"
-		Me.LblCity.Size = New System.Drawing.Size(275, 38)
-		Me.LblCity.TabIndex = 4
-		Me.LblCity.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-		'
-		'LblMailingAddress
-		'
-		Me.LblMailingAddress.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(44, Byte), Integer), CType(CType(96, Byte), Integer))
-		Me.LblMailingAddress.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-		Me.LblMailingAddress.Dock = System.Windows.Forms.DockStyle.Fill
-		Me.LblMailingAddress.ForeColor = System.Drawing.Color.White
-		Me.LblMailingAddress.Location = New System.Drawing.Point(248, 75)
-		Me.LblMailingAddress.Name = "LblMailingAddress"
-		Me.LblMailingAddress.Size = New System.Drawing.Size(275, 38)
-		Me.LblMailingAddress.TabIndex = 3
-		Me.LblMailingAddress.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-		'
-		'LblPhysicalAddress
-		'
-		Me.LblPhysicalAddress.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(44, Byte), Integer), CType(CType(96, Byte), Integer))
-		Me.LblPhysicalAddress.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-		Me.LblPhysicalAddress.Dock = System.Windows.Forms.DockStyle.Fill
-		Me.LblPhysicalAddress.ForeColor = System.Drawing.Color.White
-		Me.LblPhysicalAddress.Location = New System.Drawing.Point(248, 37)
-		Me.LblPhysicalAddress.Name = "LblPhysicalAddress"
-		Me.LblPhysicalAddress.Size = New System.Drawing.Size(275, 38)
-		Me.LblPhysicalAddress.TabIndex = 2
-		Me.LblPhysicalAddress.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-		'
-		'LblBirthDate
-		'
-		Me.LblBirthDate.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(44, Byte), Integer), CType(CType(96, Byte), Integer))
-		Me.LblBirthDate.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-		Me.LblBirthDate.Dock = System.Windows.Forms.DockStyle.Fill
-		Me.LblBirthDate.ForeColor = System.Drawing.Color.White
-		Me.LblBirthDate.Location = New System.Drawing.Point(248, 189)
-		Me.LblBirthDate.Name = "LblBirthDate"
-		Me.LblBirthDate.Size = New System.Drawing.Size(275, 37)
-		Me.LblBirthDate.TabIndex = 1
-		Me.LblBirthDate.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-		'
-		'LblFullName
-		'
-		Me.LblFullName.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(44, Byte), Integer), CType(CType(96, Byte), Integer))
-		Me.LblFullName.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-		Me.LblFullName.Dock = System.Windows.Forms.DockStyle.Fill
-		Me.LblFullName.ForeColor = System.Drawing.Color.White
-		Me.LblFullName.Location = New System.Drawing.Point(248, 0)
-		Me.LblFullName.Name = "LblFullName"
-		Me.LblFullName.Size = New System.Drawing.Size(275, 37)
-		Me.LblFullName.TabIndex = 0
-		Me.LblFullName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-		'
-		'TableLayoutPanel1
-		'
-		Me.TableLayoutPanel1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-			Or System.Windows.Forms.AnchorStyles.Left) _
-			Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-		Me.TableLayoutPanel1.BackColor = System.Drawing.SystemColors.Control
-		Me.TableLayoutPanel1.ColumnCount = 2
-		Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-		Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 281.0!))
-		Me.TableLayoutPanel1.Controls.Add(Me.LblFullName, 1, 0)
-		Me.TableLayoutPanel1.Controls.Add(Me.LblPhysicalAddress, 1, 1)
-		Me.TableLayoutPanel1.Controls.Add(Me.LblMailingAddress, 1, 2)
-		Me.TableLayoutPanel1.Controls.Add(Me.LblCity, 1, 3)
-		Me.TableLayoutPanel1.Controls.Add(Me.LblZipcode, 1, 4)
-		Me.TableLayoutPanel1.Controls.Add(Me.LblBirthDate, 1, 5)
-		Me.TableLayoutPanel1.Controls.Add(Me.LblCellularNumber, 1, 6)
-		Me.TableLayoutPanel1.Controls.Add(Me.LblEmail, 1, 7)
-		Me.TableLayoutPanel1.Controls.Add(Me.Label4, 0, 1)
-		Me.TableLayoutPanel1.Controls.Add(Me.Label6, 0, 2)
-		Me.TableLayoutPanel1.Controls.Add(Me.Label8, 0, 3)
-		Me.TableLayoutPanel1.Controls.Add(Me.Label10, 0, 4)
-		Me.TableLayoutPanel1.Controls.Add(Me.Label11, 0, 5)
-		Me.TableLayoutPanel1.Controls.Add(Me.Label12, 0, 6)
-		Me.TableLayoutPanel1.Controls.Add(Me.Label13, 0, 7)
-		Me.TableLayoutPanel1.Controls.Add(Me.Label2, 0, 0)
-		Me.TableLayoutPanel1.Location = New System.Drawing.Point(9, 35)
-		Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
-		Me.TableLayoutPanel1.RowCount = 9
-		Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle())
-		Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle())
-		Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle())
-		Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle())
-		Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle())
-		Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle())
-		Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle())
-		Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle())
-		Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
-		Me.TableLayoutPanel1.Size = New System.Drawing.Size(526, 338)
-		Me.TableLayoutPanel1.TabIndex = 8
-		'
-		'GroupBox2
-		'
-		Me.GroupBox2.Controls.Add(Me.TableLayoutPanel2)
-		Me.GroupBox2.Font = New System.Drawing.Font("Arial", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.GroupBox2.Location = New System.Drawing.Point(881, 476)
-		Me.GroupBox2.Name = "GroupBox2"
-		Me.GroupBox2.Size = New System.Drawing.Size(533, 381)
-		Me.GroupBox2.TabIndex = 47
-		Me.GroupBox2.TabStop = False
-		Me.GroupBox2.Text = "Company Info"
-		'
-		'TableLayoutPanel2
-		'
-		Me.TableLayoutPanel2.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-			Or System.Windows.Forms.AnchorStyles.Left) _
-			Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-		Me.TableLayoutPanel2.BackColor = System.Drawing.SystemColors.Control
-		Me.TableLayoutPanel2.ColumnCount = 2
-		Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-		Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 247.0!))
-		Me.TableLayoutPanel2.Controls.Add(Me.LblClientFee, 1, 7)
-		Me.TableLayoutPanel2.Controls.Add(Me.LblCompanyCity, 1, 6)
-		Me.TableLayoutPanel2.Controls.Add(Me.LblCompanyName, 1, 5)
-		Me.TableLayoutPanel2.Controls.Add(Me.Label3, 0, 5)
-		Me.TableLayoutPanel2.Controls.Add(Me.Label5, 0, 6)
-		Me.TableLayoutPanel2.Controls.Add(Me.Label7, 0, 7)
-		Me.TableLayoutPanel2.Location = New System.Drawing.Point(9, 35)
-		Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
-		Me.TableLayoutPanel2.RowCount = 9
-		Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle())
-		Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle())
-		Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle())
-		Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle())
-		Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle())
-		Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle())
-		Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle())
-		Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle())
-		Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
-		Me.TableLayoutPanel2.Size = New System.Drawing.Size(508, 338)
-		Me.TableLayoutPanel2.TabIndex = 8
-		'
-		'LblClientFee
-		'
-		Me.LblClientFee.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(44, Byte), Integer), CType(CType(96, Byte), Integer))
-		Me.LblClientFee.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-		Me.LblClientFee.Dock = System.Windows.Forms.DockStyle.Fill
-		Me.LblClientFee.ForeColor = System.Drawing.Color.White
-		Me.LblClientFee.Location = New System.Drawing.Point(264, 75)
-		Me.LblClientFee.Name = "LblClientFee"
-		Me.LblClientFee.Size = New System.Drawing.Size(241, 38)
-		Me.LblClientFee.TabIndex = 7
-		Me.LblClientFee.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-		'
-		'LblCompanyCity
-		'
-		Me.LblCompanyCity.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(44, Byte), Integer), CType(CType(96, Byte), Integer))
-		Me.LblCompanyCity.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-		Me.LblCompanyCity.Dock = System.Windows.Forms.DockStyle.Fill
-		Me.LblCompanyCity.ForeColor = System.Drawing.Color.White
-		Me.LblCompanyCity.Location = New System.Drawing.Point(264, 37)
-		Me.LblCompanyCity.Name = "LblCompanyCity"
-		Me.LblCompanyCity.Size = New System.Drawing.Size(241, 38)
-		Me.LblCompanyCity.TabIndex = 6
-		Me.LblCompanyCity.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-		'
-		'LblCompanyName
-		'
-		Me.LblCompanyName.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(44, Byte), Integer), CType(CType(96, Byte), Integer))
-		Me.LblCompanyName.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-		Me.LblCompanyName.Dock = System.Windows.Forms.DockStyle.Fill
-		Me.LblCompanyName.ForeColor = System.Drawing.Color.White
-		Me.LblCompanyName.Location = New System.Drawing.Point(264, 0)
-		Me.LblCompanyName.Name = "LblCompanyName"
-		Me.LblCompanyName.Size = New System.Drawing.Size(241, 37)
-		Me.LblCompanyName.TabIndex = 1
-		Me.LblCompanyName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-		'
 		'ClientId
 		'
 		Me.ClientId.HeaderText = "Client #"
@@ -624,16 +417,152 @@ Partial Class DashboardForm
 		Me.ClientFee.Name = "ClientFee"
 		Me.ClientFee.Width = 125
 		'
-		'Label2
+		'GroupBox1
 		'
-		Me.Label2.AutoSize = True
-		Me.Label2.Dock = System.Windows.Forms.DockStyle.Fill
-		Me.Label2.Location = New System.Drawing.Point(3, 0)
-		Me.Label2.Name = "Label2"
-		Me.Label2.Size = New System.Drawing.Size(239, 37)
-		Me.Label2.TabIndex = 8
-		Me.Label2.Text = "Full Name"
-		Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+		Me.GroupBox1.Controls.Add(Me.TableLayoutPanel1)
+		Me.GroupBox1.Font = New System.Drawing.Font("Arial", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+		Me.GroupBox1.Location = New System.Drawing.Point(324, 476)
+		Me.GroupBox1.Name = "GroupBox1"
+		Me.GroupBox1.Size = New System.Drawing.Size(551, 381)
+		Me.GroupBox1.TabIndex = 46
+		Me.GroupBox1.TabStop = False
+		Me.GroupBox1.Text = "Client Personal Info"
+		'
+		'TableLayoutPanel1
+		'
+		Me.TableLayoutPanel1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+			Or System.Windows.Forms.AnchorStyles.Left) _
+			Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+		Me.TableLayoutPanel1.BackColor = System.Drawing.SystemColors.Control
+		Me.TableLayoutPanel1.ColumnCount = 2
+		Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+		Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 281.0!))
+		Me.TableLayoutPanel1.Controls.Add(Me.LblFullName, 1, 0)
+		Me.TableLayoutPanel1.Controls.Add(Me.LblPhysicalAddress, 1, 1)
+		Me.TableLayoutPanel1.Controls.Add(Me.LblMailingAddress, 1, 2)
+		Me.TableLayoutPanel1.Controls.Add(Me.LblCity, 1, 3)
+		Me.TableLayoutPanel1.Controls.Add(Me.LblZipcode, 1, 4)
+		Me.TableLayoutPanel1.Controls.Add(Me.LblBirthDate, 1, 5)
+		Me.TableLayoutPanel1.Controls.Add(Me.LblCellularNumber, 1, 6)
+		Me.TableLayoutPanel1.Controls.Add(Me.LblEmail, 1, 7)
+		Me.TableLayoutPanel1.Controls.Add(Me.Label4, 0, 1)
+		Me.TableLayoutPanel1.Controls.Add(Me.Label6, 0, 2)
+		Me.TableLayoutPanel1.Controls.Add(Me.Label8, 0, 3)
+		Me.TableLayoutPanel1.Controls.Add(Me.Label10, 0, 4)
+		Me.TableLayoutPanel1.Controls.Add(Me.Label11, 0, 5)
+		Me.TableLayoutPanel1.Controls.Add(Me.Label12, 0, 6)
+		Me.TableLayoutPanel1.Controls.Add(Me.Label13, 0, 7)
+		Me.TableLayoutPanel1.Controls.Add(Me.Label2, 0, 0)
+		Me.TableLayoutPanel1.Location = New System.Drawing.Point(9, 35)
+		Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
+		Me.TableLayoutPanel1.RowCount = 9
+		Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle())
+		Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle())
+		Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle())
+		Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle())
+		Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle())
+		Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle())
+		Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle())
+		Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle())
+		Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
+		Me.TableLayoutPanel1.Size = New System.Drawing.Size(526, 338)
+		Me.TableLayoutPanel1.TabIndex = 8
+		'
+		'LblFullName
+		'
+		Me.LblFullName.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(44, Byte), Integer), CType(CType(96, Byte), Integer))
+		Me.LblFullName.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+		Me.LblFullName.Dock = System.Windows.Forms.DockStyle.Fill
+		Me.LblFullName.ForeColor = System.Drawing.Color.White
+		Me.LblFullName.Location = New System.Drawing.Point(248, 0)
+		Me.LblFullName.Name = "LblFullName"
+		Me.LblFullName.Size = New System.Drawing.Size(275, 37)
+		Me.LblFullName.TabIndex = 0
+		Me.LblFullName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+		'
+		'LblPhysicalAddress
+		'
+		Me.LblPhysicalAddress.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(44, Byte), Integer), CType(CType(96, Byte), Integer))
+		Me.LblPhysicalAddress.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+		Me.LblPhysicalAddress.Dock = System.Windows.Forms.DockStyle.Fill
+		Me.LblPhysicalAddress.ForeColor = System.Drawing.Color.White
+		Me.LblPhysicalAddress.Location = New System.Drawing.Point(248, 37)
+		Me.LblPhysicalAddress.Name = "LblPhysicalAddress"
+		Me.LblPhysicalAddress.Size = New System.Drawing.Size(275, 38)
+		Me.LblPhysicalAddress.TabIndex = 2
+		Me.LblPhysicalAddress.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+		'
+		'LblMailingAddress
+		'
+		Me.LblMailingAddress.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(44, Byte), Integer), CType(CType(96, Byte), Integer))
+		Me.LblMailingAddress.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+		Me.LblMailingAddress.Dock = System.Windows.Forms.DockStyle.Fill
+		Me.LblMailingAddress.ForeColor = System.Drawing.Color.White
+		Me.LblMailingAddress.Location = New System.Drawing.Point(248, 75)
+		Me.LblMailingAddress.Name = "LblMailingAddress"
+		Me.LblMailingAddress.Size = New System.Drawing.Size(275, 38)
+		Me.LblMailingAddress.TabIndex = 3
+		Me.LblMailingAddress.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+		'
+		'LblCity
+		'
+		Me.LblCity.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(44, Byte), Integer), CType(CType(96, Byte), Integer))
+		Me.LblCity.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+		Me.LblCity.Dock = System.Windows.Forms.DockStyle.Fill
+		Me.LblCity.ForeColor = System.Drawing.Color.White
+		Me.LblCity.Location = New System.Drawing.Point(248, 113)
+		Me.LblCity.Name = "LblCity"
+		Me.LblCity.Size = New System.Drawing.Size(275, 38)
+		Me.LblCity.TabIndex = 4
+		Me.LblCity.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+		'
+		'LblZipcode
+		'
+		Me.LblZipcode.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(44, Byte), Integer), CType(CType(96, Byte), Integer))
+		Me.LblZipcode.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+		Me.LblZipcode.Dock = System.Windows.Forms.DockStyle.Fill
+		Me.LblZipcode.ForeColor = System.Drawing.Color.White
+		Me.LblZipcode.Location = New System.Drawing.Point(248, 151)
+		Me.LblZipcode.Name = "LblZipcode"
+		Me.LblZipcode.Size = New System.Drawing.Size(275, 38)
+		Me.LblZipcode.TabIndex = 5
+		Me.LblZipcode.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+		'
+		'LblBirthDate
+		'
+		Me.LblBirthDate.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(44, Byte), Integer), CType(CType(96, Byte), Integer))
+		Me.LblBirthDate.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+		Me.LblBirthDate.Dock = System.Windows.Forms.DockStyle.Fill
+		Me.LblBirthDate.ForeColor = System.Drawing.Color.White
+		Me.LblBirthDate.Location = New System.Drawing.Point(248, 189)
+		Me.LblBirthDate.Name = "LblBirthDate"
+		Me.LblBirthDate.Size = New System.Drawing.Size(275, 37)
+		Me.LblBirthDate.TabIndex = 1
+		Me.LblBirthDate.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+		'
+		'LblCellularNumber
+		'
+		Me.LblCellularNumber.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(44, Byte), Integer), CType(CType(96, Byte), Integer))
+		Me.LblCellularNumber.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+		Me.LblCellularNumber.Dock = System.Windows.Forms.DockStyle.Fill
+		Me.LblCellularNumber.ForeColor = System.Drawing.Color.White
+		Me.LblCellularNumber.Location = New System.Drawing.Point(248, 226)
+		Me.LblCellularNumber.Name = "LblCellularNumber"
+		Me.LblCellularNumber.Size = New System.Drawing.Size(275, 38)
+		Me.LblCellularNumber.TabIndex = 6
+		Me.LblCellularNumber.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+		'
+		'LblEmail
+		'
+		Me.LblEmail.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(44, Byte), Integer), CType(CType(96, Byte), Integer))
+		Me.LblEmail.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+		Me.LblEmail.Dock = System.Windows.Forms.DockStyle.Fill
+		Me.LblEmail.ForeColor = System.Drawing.Color.White
+		Me.LblEmail.Location = New System.Drawing.Point(248, 264)
+		Me.LblEmail.Name = "LblEmail"
+		Me.LblEmail.Size = New System.Drawing.Size(275, 38)
+		Me.LblEmail.TabIndex = 7
+		Me.LblEmail.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
 		'
 		'Label4
 		'
@@ -712,6 +641,94 @@ Partial Class DashboardForm
 		Me.Label13.Text = "Email"
 		Me.Label13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
 		'
+		'Label2
+		'
+		Me.Label2.AutoSize = True
+		Me.Label2.Dock = System.Windows.Forms.DockStyle.Fill
+		Me.Label2.Location = New System.Drawing.Point(3, 0)
+		Me.Label2.Name = "Label2"
+		Me.Label2.Size = New System.Drawing.Size(239, 37)
+		Me.Label2.TabIndex = 8
+		Me.Label2.Text = "Full Name"
+		Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+		'
+		'GroupBox2
+		'
+		Me.GroupBox2.Controls.Add(Me.TableLayoutPanel2)
+		Me.GroupBox2.Font = New System.Drawing.Font("Arial", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+		Me.GroupBox2.Location = New System.Drawing.Point(881, 476)
+		Me.GroupBox2.Name = "GroupBox2"
+		Me.GroupBox2.Size = New System.Drawing.Size(533, 261)
+		Me.GroupBox2.TabIndex = 47
+		Me.GroupBox2.TabStop = False
+		Me.GroupBox2.Text = "Company Info"
+		'
+		'TableLayoutPanel2
+		'
+		Me.TableLayoutPanel2.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+			Or System.Windows.Forms.AnchorStyles.Left) _
+			Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+		Me.TableLayoutPanel2.BackColor = System.Drawing.SystemColors.Control
+		Me.TableLayoutPanel2.ColumnCount = 2
+		Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+		Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 247.0!))
+		Me.TableLayoutPanel2.Controls.Add(Me.LblClientFee, 1, 7)
+		Me.TableLayoutPanel2.Controls.Add(Me.LblCompanyCity, 1, 6)
+		Me.TableLayoutPanel2.Controls.Add(Me.LblCompanyName, 1, 5)
+		Me.TableLayoutPanel2.Controls.Add(Me.Label3, 0, 5)
+		Me.TableLayoutPanel2.Controls.Add(Me.Label5, 0, 6)
+		Me.TableLayoutPanel2.Controls.Add(Me.Label7, 0, 7)
+		Me.TableLayoutPanel2.Location = New System.Drawing.Point(9, 35)
+		Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
+		Me.TableLayoutPanel2.RowCount = 9
+		Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle())
+		Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle())
+		Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle())
+		Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle())
+		Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle())
+		Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle())
+		Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle())
+		Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle())
+		Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
+		Me.TableLayoutPanel2.Size = New System.Drawing.Size(508, 220)
+		Me.TableLayoutPanel2.TabIndex = 8
+		'
+		'LblClientFee
+		'
+		Me.LblClientFee.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(44, Byte), Integer), CType(CType(96, Byte), Integer))
+		Me.LblClientFee.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+		Me.LblClientFee.Dock = System.Windows.Forms.DockStyle.Fill
+		Me.LblClientFee.ForeColor = System.Drawing.Color.White
+		Me.LblClientFee.Location = New System.Drawing.Point(264, 75)
+		Me.LblClientFee.Name = "LblClientFee"
+		Me.LblClientFee.Size = New System.Drawing.Size(241, 38)
+		Me.LblClientFee.TabIndex = 7
+		Me.LblClientFee.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+		'
+		'LblCompanyCity
+		'
+		Me.LblCompanyCity.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(44, Byte), Integer), CType(CType(96, Byte), Integer))
+		Me.LblCompanyCity.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+		Me.LblCompanyCity.Dock = System.Windows.Forms.DockStyle.Fill
+		Me.LblCompanyCity.ForeColor = System.Drawing.Color.White
+		Me.LblCompanyCity.Location = New System.Drawing.Point(264, 37)
+		Me.LblCompanyCity.Name = "LblCompanyCity"
+		Me.LblCompanyCity.Size = New System.Drawing.Size(241, 38)
+		Me.LblCompanyCity.TabIndex = 6
+		Me.LblCompanyCity.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+		'
+		'LblCompanyName
+		'
+		Me.LblCompanyName.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(44, Byte), Integer), CType(CType(96, Byte), Integer))
+		Me.LblCompanyName.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+		Me.LblCompanyName.Dock = System.Windows.Forms.DockStyle.Fill
+		Me.LblCompanyName.ForeColor = System.Drawing.Color.White
+		Me.LblCompanyName.Location = New System.Drawing.Point(264, 0)
+		Me.LblCompanyName.Name = "LblCompanyName"
+		Me.LblCompanyName.Size = New System.Drawing.Size(241, 37)
+		Me.LblCompanyName.TabIndex = 1
+		Me.LblCompanyName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+		'
 		'Label3
 		'
 		Me.Label3.AutoSize = True
@@ -745,21 +762,16 @@ Partial Class DashboardForm
 		Me.Label7.Text = "Fee"
 		Me.Label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
 		'
-		'BtnSettings
+		'BtnClearGroupBoxes
 		'
-		Me.BtnSettings.BackColor = System.Drawing.Color.Transparent
-		Me.BtnSettings.Dock = System.Windows.Forms.DockStyle.Bottom
-		Me.BtnSettings.FlatAppearance.BorderSize = 0
-		Me.BtnSettings.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gold
-		Me.BtnSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-		Me.BtnSettings.Font = New System.Drawing.Font("Arial", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.BtnSettings.ForeColor = System.Drawing.Color.White
-		Me.BtnSettings.Location = New System.Drawing.Point(0, 823)
-		Me.BtnSettings.Name = "BtnSettings"
-		Me.BtnSettings.Size = New System.Drawing.Size(305, 46)
-		Me.BtnSettings.TabIndex = 5
-		Me.BtnSettings.Text = "Settings"
-		Me.BtnSettings.UseVisualStyleBackColor = False
+		Me.BtnClearGroupBoxes.BackColor = System.Drawing.Color.Gold
+		Me.BtnClearGroupBoxes.Font = New System.Drawing.Font("Arial", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+		Me.BtnClearGroupBoxes.Location = New System.Drawing.Point(1003, 765)
+		Me.BtnClearGroupBoxes.Name = "BtnClearGroupBoxes"
+		Me.BtnClearGroupBoxes.Size = New System.Drawing.Size(295, 63)
+		Me.BtnClearGroupBoxes.TabIndex = 9
+		Me.BtnClearGroupBoxes.Text = "Clear"
+		Me.BtnClearGroupBoxes.UseVisualStyleBackColor = False
 		'
 		'DashboardForm
 		'
@@ -767,6 +779,7 @@ Partial Class DashboardForm
 		Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
 		Me.BackColor = System.Drawing.SystemColors.Control
 		Me.ClientSize = New System.Drawing.Size(1426, 869)
+		Me.Controls.Add(Me.BtnClearGroupBoxes)
 		Me.Controls.Add(Me.GroupBox2)
 		Me.Controls.Add(Me.GroupBox1)
 		Me.Controls.Add(Me.DataGridViewClients)
@@ -848,4 +861,5 @@ Partial Class DashboardForm
 	Friend WithEvents Label5 As Label
 	Friend WithEvents Label7 As Label
 	Friend WithEvents BtnSettings As Button
+	Friend WithEvents BtnClearGroupBoxes As Button
 End Class
