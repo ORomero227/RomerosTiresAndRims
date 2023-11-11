@@ -10,6 +10,7 @@ Public Class DashboardForm
 	Private _createClientForm As AddClientForm
 	Private _myDatabase As New MyDataBase()
 	Private listOfClients As List(Of Client)
+	Private _currentRowIndex As Integer = 0
 
 	'Constructor Recibe el vendedor y el form de login
 	Public Sub New(seller As Seller, loginForm As LoginForm)
@@ -22,15 +23,29 @@ Public Class DashboardForm
 
 	'Carga el datagridview
 	Public Sub LoadClients()
-		DataGridViewClients.Rows.Clear()
-		ClearGroupBoxInfo()
+		'Esto es en caso de que se agregue o se elimine un cliente
+		ClientsGridView.Rows.Clear()
+
+		'Vacio los labels de los groupbox
+		LblFullName.Text = ""
+		LblPhysicalAddress.Text = ""
+		LblMailingAddress.Text = ""
+		LblCity.Text = ""
+		LblZipcode.Text = ""
+		LblBirthDate.Text = ""
+		LblCellularNumber.Text = ""
+		LblEmail.Text = ""
+		LblCompanyName.Text = ""
+		LblCompanyCity.Text = ""
+		LblClientFee.Text = "$"
 
 		'Obtiene los clientes del vendedor
 		listOfClients = _myDatabase.GetSellerClients(_seller)
 
+		'Se llena la tabla
 		For Each client As Client In listOfClients
 
-			DataGridViewClients.Rows.Add(client.ClientId, client.FirstName, client.PaternalLastName, client.MaternalLastName,
+			ClientsGridView.Rows.Add(client.ClientId, client.FirstName, client.PaternalLastName, client.MaternalLastName,
 										 client.PhysicalAddress, client.MailingAddress, client.City, client.ZipCode,
 										 client.BirthDate.ToString("dd/MM/yyyy"), client.CellularNumber, client.Email,
 										 client.CompanyName, client.CompanyCity, client.ClientFee.ToString("c2"))
@@ -76,19 +91,19 @@ Public Class DashboardForm
 
 	'Barra de busqueda
 	Private Sub TxtSearchBar_TextChanged(sender As Object, e As EventArgs) Handles TxtSearchBar.TextChanged
-		DataGridViewClients.Rows.Clear() 'Vacio el datagrid
+		ClientsGridView.Rows.Clear() 'Vacio el datagrid
 
 		'Obtengo los clientes que coincidan con el searchbar
 		listOfClients = _myDatabase.SearchClient(TxtSearchBar.Text)
 
 		'Si no coincide vacio el datagrid y cargo todos los clientes del vendedor
 		If listOfClients.Count = 0 Then
-			DataGridViewClients.Rows.Clear()
+			ClientsGridView.Rows.Clear()
 			listOfClients = _myDatabase.GetSellerClients(_seller)
 		End If
 
 		For Each client As Client In listOfClients
-			DataGridViewClients.Rows.Add(
+			ClientsGridView.Rows.Add(
 					client.ClientId, client.FirstName, client.PaternalLastName,
 					client.MaternalLastName, client.PhysicalAddress,
 					client.MailingAddress, client.City, client.ZipCode,
@@ -102,14 +117,24 @@ Public Class DashboardForm
 		Me.ActiveControl = Nothing
 	End Sub
 
-	'LLenar los group box de informacion
-	Private Sub DataGridViewClients_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridViewClients.CellClick
+	'Obtener la fila actual
+	Public Sub ShowCurrentRow(selectedRow As DataGridViewRow)
 
-		'Se verifica si la fila seleccionada existe
-		If e.RowIndex >= 0 Then
+		'Verifica que haya por lo menos una fila
+		If ClientsGridView.Rows.Count > 0 Then
+			'Validacion de que la fila este dentro de los limites
+			If _currentRowIndex < 0 Then
+				_currentRowIndex = 0
+			ElseIf _currentRowIndex >= ClientsGridView.Rows.Count Then
+				_currentRowIndex = ClientsGridView.Rows.Count - 1
+			End If
 
-			'Se obtiene la fila
-			Dim selectedRow As DataGridViewRow = DataGridViewClients.Rows(e.RowIndex)
+			'Establece la fila actual como la visible
+			ClientsGridView.FirstDisplayedScrollingRowIndex = _currentRowIndex
+
+			'Selecciona la actual y quita de seleccionar las otras
+			ClientsGridView.ClearSelection()
+			ClientsGridView.Rows(_currentRowIndex).Selected = True
 
 			'Se asignan los valores de las columnas a las variabless
 			Dim fullName As String = $"{selectedRow.Cells("FirstName").Value.ToString()} {selectedRow.Cells("PaternalLastName").Value.ToString()} {selectedRow.Cells("MaternalLastname").Value.ToString()}"
@@ -141,8 +166,10 @@ Public Class DashboardForm
 		End If
 	End Sub
 
-	'Vacia los labels de los groupbox
-	Public Sub ClearGroupBoxInfo()
+	'Boton clear para borrar los groupbox y el searchbar si esta lleno
+	Private Sub BtnClearGroupBoxes_Click(sender As Object, e As EventArgs) Handles BtnClearGroupBoxes.Click
+		TxtSearchBar.Clear()
+
 		'GroupBox de client info
 		LblFullName.Text = ""
 		LblPhysicalAddress.Text = ""
@@ -159,7 +186,44 @@ Public Class DashboardForm
 		LblClientFee.Text = "$"
 	End Sub
 
-	Private Sub BtnClearGroupBoxes_Click(sender As Object, e As EventArgs) Handles BtnClearGroupBoxes.Click
-		ClearGroupBoxInfo()
+	'Boton para regresar la seleccion de la fila en la tabla
+	Private Sub BtnPrevious_Click(sender As Object, e As EventArgs) Handles BtnPrevious.Click
+		If _currentRowIndex > 0 Then
+			_currentRowIndex -= 1
+		End If
+
+		Dim updateRow As DataGridViewRow = ClientsGridView.Rows(_currentRowIndex)
+
+		ShowCurrentRow(updateRow)
+	End Sub
+
+	'Boton para siguiente selecciion de la fila en la tabla
+	Private Sub BtnNext_Click(sender As Object, e As EventArgs) Handles BtnNext.Click
+		If _currentRowIndex < ClientsGridView.Rows.Count - 1 Then
+			_currentRowIndex += 1
+		End If
+
+		Dim updateRow As DataGridViewRow = ClientsGridView.Rows(_currentRowIndex)
+
+		ShowCurrentRow(updateRow)
+	End Sub
+
+	'Cuando se selecciona una celda por medio de un click
+	Private Sub ClientsGridView_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles ClientsGridView.CellClick
+		If e.RowIndex >= 0 AndAlso e.RowIndex < ClientsGridView.Rows.Count Then
+
+			_currentRowIndex = e.RowIndex
+
+			Dim selectedRow As DataGridViewRow = ClientsGridView.Rows(e.RowIndex)
+
+			ShowCurrentRow(selectedRow)
+		End If
+	End Sub
+
+	'Boton para actualizar los groupbox
+	Private Sub BtnRefresh_Click(sender As Object, e As EventArgs) Handles BtnRefresh.Click
+
+		Dim refreshCurrentRow As DataGridViewRow = ClientsGridView.Rows(_currentRowIndex)
+		ShowCurrentRow(refreshCurrentRow)
 	End Sub
 End Class

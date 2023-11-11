@@ -200,7 +200,7 @@ Public Class Client
 		_sellerId = Guid.NewGuid()
 	End Sub
 
-	'Cuando se crea desde el form de create account
+	'Cuando se crea desde el form de add client
 	Public Sub New(fName As String, pLastName As String, mLastName As String, pAddres As String, mAddres As String,
 				   city As String, zipcode As String, birthDate As Date,
 				   cellNum As String, email As String, companyName As String, companyCity As String, clientFee As Double, sellerId As Guid)

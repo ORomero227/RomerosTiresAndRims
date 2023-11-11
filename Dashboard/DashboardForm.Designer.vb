@@ -23,12 +23,12 @@ Partial Class DashboardForm
 	<System.Diagnostics.DebuggerStepThrough()>
 	Private Sub InitializeComponent()
 		Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(DashboardForm))
-		Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-		Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-		Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-		Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+		Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+		Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+		Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+		Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
 		Me.PanelSidebar = New System.Windows.Forms.Panel()
-		Me.BtnSettings = New System.Windows.Forms.Button()
+		Me.BtnMyAccount = New System.Windows.Forms.Button()
 		Me.BtnDeleteClient = New System.Windows.Forms.Button()
 		Me.BtnEditClient = New System.Windows.Forms.Button()
 		Me.BtnAddClient = New System.Windows.Forms.Button()
@@ -40,7 +40,7 @@ Partial Class DashboardForm
 		Me.BtnExit = New System.Windows.Forms.Button()
 		Me.TxtSearchBar = New System.Windows.Forms.TextBox()
 		Me.Label1 = New System.Windows.Forms.Label()
-		Me.DataGridViewClients = New System.Windows.Forms.DataGridView()
+		Me.ClientsGridView = New System.Windows.Forms.DataGridView()
 		Me.ClientId = New System.Windows.Forms.DataGridViewTextBoxColumn()
 		Me.FirstName = New System.Windows.Forms.DataGridViewTextBoxColumn()
 		Me.PaternalLastname = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -82,12 +82,15 @@ Partial Class DashboardForm
 		Me.Label5 = New System.Windows.Forms.Label()
 		Me.Label7 = New System.Windows.Forms.Label()
 		Me.BtnClearGroupBoxes = New System.Windows.Forms.Button()
+		Me.BtnPrevious = New System.Windows.Forms.Button()
+		Me.BtnNext = New System.Windows.Forms.Button()
+		Me.BtnRefresh = New System.Windows.Forms.Button()
 		Me.PanelSidebar.SuspendLayout()
 		Me.PanelWelcome.SuspendLayout()
 		Me.PanelBanner.SuspendLayout()
 		CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
 		Me.PanelSearchBar.SuspendLayout()
-		CType(Me.DataGridViewClients, System.ComponentModel.ISupportInitialize).BeginInit()
+		CType(Me.ClientsGridView, System.ComponentModel.ISupportInitialize).BeginInit()
 		Me.GroupBox1.SuspendLayout()
 		Me.TableLayoutPanel1.SuspendLayout()
 		Me.GroupBox2.SuspendLayout()
@@ -97,7 +100,7 @@ Partial Class DashboardForm
 		'PanelSidebar
 		'
 		Me.PanelSidebar.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(44, Byte), Integer), CType(CType(96, Byte), Integer))
-		Me.PanelSidebar.Controls.Add(Me.BtnSettings)
+		Me.PanelSidebar.Controls.Add(Me.BtnMyAccount)
 		Me.PanelSidebar.Controls.Add(Me.BtnDeleteClient)
 		Me.PanelSidebar.Controls.Add(Me.BtnEditClient)
 		Me.PanelSidebar.Controls.Add(Me.BtnAddClient)
@@ -109,21 +112,21 @@ Partial Class DashboardForm
 		Me.PanelSidebar.Size = New System.Drawing.Size(305, 869)
 		Me.PanelSidebar.TabIndex = 0
 		'
-		'BtnSettings
+		'BtnMyAccount
 		'
-		Me.BtnSettings.BackColor = System.Drawing.Color.Transparent
-		Me.BtnSettings.Dock = System.Windows.Forms.DockStyle.Bottom
-		Me.BtnSettings.FlatAppearance.BorderSize = 0
-		Me.BtnSettings.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gold
-		Me.BtnSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-		Me.BtnSettings.Font = New System.Drawing.Font("Arial", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.BtnSettings.ForeColor = System.Drawing.Color.White
-		Me.BtnSettings.Location = New System.Drawing.Point(0, 823)
-		Me.BtnSettings.Name = "BtnSettings"
-		Me.BtnSettings.Size = New System.Drawing.Size(305, 46)
-		Me.BtnSettings.TabIndex = 5
-		Me.BtnSettings.Text = "Settings"
-		Me.BtnSettings.UseVisualStyleBackColor = False
+		Me.BtnMyAccount.BackColor = System.Drawing.Color.Transparent
+		Me.BtnMyAccount.Dock = System.Windows.Forms.DockStyle.Bottom
+		Me.BtnMyAccount.FlatAppearance.BorderSize = 0
+		Me.BtnMyAccount.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gold
+		Me.BtnMyAccount.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+		Me.BtnMyAccount.Font = New System.Drawing.Font("Arial", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+		Me.BtnMyAccount.ForeColor = System.Drawing.Color.White
+		Me.BtnMyAccount.Location = New System.Drawing.Point(0, 823)
+		Me.BtnMyAccount.Name = "BtnMyAccount"
+		Me.BtnMyAccount.Size = New System.Drawing.Size(305, 46)
+		Me.BtnMyAccount.TabIndex = 5
+		Me.BtnMyAccount.Text = "My Account"
+		Me.BtnMyAccount.UseVisualStyleBackColor = False
 		'
 		'BtnDeleteClient
 		'
@@ -263,67 +266,71 @@ Partial Class DashboardForm
 		Me.Label1.TabIndex = 6
 		Me.Label1.Text = "Search:"
 		'
-		'DataGridViewClients
+		'ClientsGridView
 		'
-		Me.DataGridViewClients.AllowUserToAddRows = False
-		Me.DataGridViewClients.AllowUserToDeleteRows = False
-		Me.DataGridViewClients.AllowUserToResizeColumns = False
-		Me.DataGridViewClients.AllowUserToResizeRows = False
-		Me.DataGridViewClients.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+		Me.ClientsGridView.AllowUserToAddRows = False
+		Me.ClientsGridView.AllowUserToDeleteRows = False
+		Me.ClientsGridView.AllowUserToResizeColumns = False
+		Me.ClientsGridView.AllowUserToResizeRows = False
+		Me.ClientsGridView.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
 			Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-		Me.DataGridViewClients.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(66, Byte), Integer), CType(CType(91, Byte), Integer))
-		Me.DataGridViewClients.BorderStyle = System.Windows.Forms.BorderStyle.None
-		Me.DataGridViewClients.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
-		Me.DataGridViewClients.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-		DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter
-		DataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(44, Byte), Integer), CType(CType(96, Byte), Integer))
-		DataGridViewCellStyle5.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		DataGridViewCellStyle5.ForeColor = System.Drawing.Color.White
-		DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
-		DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-		DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-		Me.DataGridViewClients.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
-		Me.DataGridViewClients.ColumnHeadersHeight = 40
-		Me.DataGridViewClients.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
-		Me.DataGridViewClients.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ClientId, Me.FirstName, Me.PaternalLastname, Me.MaternalLastname, Me.PhysicalAddress, Me.MailingAddress, Me.City, Me.Zipcode, Me.BirthDate, Me.CellularNumber, Me.Email, Me.CompanyName, Me.CompanyCity, Me.ClientFee})
-		DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-		DataGridViewCellStyle6.BackColor = System.Drawing.Color.White
-		DataGridViewCellStyle6.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		DataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText
-		DataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight
-		DataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-		DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-		Me.DataGridViewClients.DefaultCellStyle = DataGridViewCellStyle6
-		Me.DataGridViewClients.EnableHeadersVisualStyles = False
-		Me.DataGridViewClients.GridColor = System.Drawing.Color.SteelBlue
-		Me.DataGridViewClients.Location = New System.Drawing.Point(323, 79)
-		Me.DataGridViewClients.Name = "DataGridViewClients"
-		Me.DataGridViewClients.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-		DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-		DataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(66, Byte), Integer), CType(CType(91, Byte), Integer))
-		DataGridViewCellStyle7.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		DataGridViewCellStyle7.ForeColor = System.Drawing.Color.White
-		DataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight
-		DataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-		DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-		Me.DataGridViewClients.RowHeadersDefaultCellStyle = DataGridViewCellStyle7
-		Me.DataGridViewClients.RowHeadersWidth = 51
-		Me.DataGridViewClients.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing
-		DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-		DataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(66, Byte), Integer), CType(CType(91, Byte), Integer))
-		DataGridViewCellStyle8.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		DataGridViewCellStyle8.ForeColor = System.Drawing.Color.White
-		DataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight
-		Me.DataGridViewClients.RowsDefaultCellStyle = DataGridViewCellStyle8
-		Me.DataGridViewClients.RowTemplate.Height = 24
-		Me.DataGridViewClients.Size = New System.Drawing.Size(1091, 391)
-		Me.DataGridViewClients.TabIndex = 45
+		Me.ClientsGridView.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(66, Byte), Integer), CType(CType(91, Byte), Integer))
+		Me.ClientsGridView.BorderStyle = System.Windows.Forms.BorderStyle.None
+		Me.ClientsGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
+		Me.ClientsGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+		DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter
+		DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(44, Byte), Integer), CType(CType(96, Byte), Integer))
+		DataGridViewCellStyle1.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+		DataGridViewCellStyle1.ForeColor = System.Drawing.Color.White
+		DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+		DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+		DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+		Me.ClientsGridView.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+		Me.ClientsGridView.ColumnHeadersHeight = 40
+		Me.ClientsGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
+		Me.ClientsGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ClientId, Me.FirstName, Me.PaternalLastname, Me.MaternalLastname, Me.PhysicalAddress, Me.MailingAddress, Me.City, Me.Zipcode, Me.BirthDate, Me.CellularNumber, Me.Email, Me.CompanyName, Me.CompanyCity, Me.ClientFee})
+		DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+		DataGridViewCellStyle2.BackColor = System.Drawing.Color.White
+		DataGridViewCellStyle2.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+		DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
+		DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+		DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+		DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+		Me.ClientsGridView.DefaultCellStyle = DataGridViewCellStyle2
+		Me.ClientsGridView.EnableHeadersVisualStyles = False
+		Me.ClientsGridView.GridColor = System.Drawing.Color.SteelBlue
+		Me.ClientsGridView.Location = New System.Drawing.Point(323, 79)
+		Me.ClientsGridView.Name = "ClientsGridView"
+		Me.ClientsGridView.ReadOnly = True
+		Me.ClientsGridView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
+		DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+		DataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(66, Byte), Integer), CType(CType(91, Byte), Integer))
+		DataGridViewCellStyle3.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+		DataGridViewCellStyle3.ForeColor = System.Drawing.Color.White
+		DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
+		DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+		DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+		Me.ClientsGridView.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
+		Me.ClientsGridView.RowHeadersVisible = False
+		Me.ClientsGridView.RowHeadersWidth = 51
+		Me.ClientsGridView.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing
+		DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+		DataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(66, Byte), Integer), CType(CType(91, Byte), Integer))
+		DataGridViewCellStyle4.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+		DataGridViewCellStyle4.ForeColor = System.Drawing.Color.White
+		DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
+		Me.ClientsGridView.RowsDefaultCellStyle = DataGridViewCellStyle4
+		Me.ClientsGridView.RowTemplate.Height = 24
+		Me.ClientsGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+		Me.ClientsGridView.Size = New System.Drawing.Size(1091, 391)
+		Me.ClientsGridView.TabIndex = 45
 		'
 		'ClientId
 		'
 		Me.ClientId.HeaderText = "Client #"
 		Me.ClientId.MinimumWidth = 6
 		Me.ClientId.Name = "ClientId"
+		Me.ClientId.ReadOnly = True
 		Me.ClientId.Width = 125
 		'
 		'FirstName
@@ -331,6 +338,7 @@ Partial Class DashboardForm
 		Me.FirstName.HeaderText = "Firstname"
 		Me.FirstName.MinimumWidth = 6
 		Me.FirstName.Name = "FirstName"
+		Me.FirstName.ReadOnly = True
 		Me.FirstName.Width = 125
 		'
 		'PaternalLastname
@@ -338,6 +346,7 @@ Partial Class DashboardForm
 		Me.PaternalLastname.HeaderText = "Paternal Lastname"
 		Me.PaternalLastname.MinimumWidth = 6
 		Me.PaternalLastname.Name = "PaternalLastname"
+		Me.PaternalLastname.ReadOnly = True
 		Me.PaternalLastname.Width = 125
 		'
 		'MaternalLastname
@@ -345,6 +354,7 @@ Partial Class DashboardForm
 		Me.MaternalLastname.HeaderText = "Maternal Lastname"
 		Me.MaternalLastname.MinimumWidth = 6
 		Me.MaternalLastname.Name = "MaternalLastname"
+		Me.MaternalLastname.ReadOnly = True
 		Me.MaternalLastname.Width = 125
 		'
 		'PhysicalAddress
@@ -352,6 +362,7 @@ Partial Class DashboardForm
 		Me.PhysicalAddress.HeaderText = "Physical Address"
 		Me.PhysicalAddress.MinimumWidth = 6
 		Me.PhysicalAddress.Name = "PhysicalAddress"
+		Me.PhysicalAddress.ReadOnly = True
 		Me.PhysicalAddress.Width = 125
 		'
 		'MailingAddress
@@ -359,6 +370,7 @@ Partial Class DashboardForm
 		Me.MailingAddress.HeaderText = "Mailing Address"
 		Me.MailingAddress.MinimumWidth = 6
 		Me.MailingAddress.Name = "MailingAddress"
+		Me.MailingAddress.ReadOnly = True
 		Me.MailingAddress.Width = 125
 		'
 		'City
@@ -366,6 +378,7 @@ Partial Class DashboardForm
 		Me.City.HeaderText = "City"
 		Me.City.MinimumWidth = 6
 		Me.City.Name = "City"
+		Me.City.ReadOnly = True
 		Me.City.Width = 125
 		'
 		'Zipcode
@@ -373,6 +386,7 @@ Partial Class DashboardForm
 		Me.Zipcode.HeaderText = "Zipcode"
 		Me.Zipcode.MinimumWidth = 6
 		Me.Zipcode.Name = "Zipcode"
+		Me.Zipcode.ReadOnly = True
 		Me.Zipcode.Width = 125
 		'
 		'BirthDate
@@ -380,6 +394,7 @@ Partial Class DashboardForm
 		Me.BirthDate.HeaderText = "Birth Date"
 		Me.BirthDate.MinimumWidth = 6
 		Me.BirthDate.Name = "BirthDate"
+		Me.BirthDate.ReadOnly = True
 		Me.BirthDate.Width = 125
 		'
 		'CellularNumber
@@ -387,6 +402,7 @@ Partial Class DashboardForm
 		Me.CellularNumber.HeaderText = "Cellular Number"
 		Me.CellularNumber.MinimumWidth = 6
 		Me.CellularNumber.Name = "CellularNumber"
+		Me.CellularNumber.ReadOnly = True
 		Me.CellularNumber.Width = 125
 		'
 		'Email
@@ -394,6 +410,7 @@ Partial Class DashboardForm
 		Me.Email.HeaderText = "Email"
 		Me.Email.MinimumWidth = 6
 		Me.Email.Name = "Email"
+		Me.Email.ReadOnly = True
 		Me.Email.Width = 125
 		'
 		'CompanyName
@@ -401,6 +418,7 @@ Partial Class DashboardForm
 		Me.CompanyName.HeaderText = "Company Name"
 		Me.CompanyName.MinimumWidth = 6
 		Me.CompanyName.Name = "CompanyName"
+		Me.CompanyName.ReadOnly = True
 		Me.CompanyName.Width = 125
 		'
 		'CompanyCity
@@ -408,6 +426,7 @@ Partial Class DashboardForm
 		Me.CompanyCity.HeaderText = "Company City"
 		Me.CompanyCity.MinimumWidth = 6
 		Me.CompanyCity.Name = "CompanyCity"
+		Me.CompanyCity.ReadOnly = True
 		Me.CompanyCity.Width = 125
 		'
 		'ClientFee
@@ -415,6 +434,7 @@ Partial Class DashboardForm
 		Me.ClientFee.HeaderText = "Client Fee"
 		Me.ClientFee.MinimumWidth = 6
 		Me.ClientFee.Name = "ClientFee"
+		Me.ClientFee.ReadOnly = True
 		Me.ClientFee.Width = 125
 		'
 		'GroupBox1
@@ -766,12 +786,47 @@ Partial Class DashboardForm
 		'
 		Me.BtnClearGroupBoxes.BackColor = System.Drawing.Color.Gold
 		Me.BtnClearGroupBoxes.Font = New System.Drawing.Font("Arial", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.BtnClearGroupBoxes.Location = New System.Drawing.Point(1003, 765)
+		Me.BtnClearGroupBoxes.Location = New System.Drawing.Point(881, 743)
 		Me.BtnClearGroupBoxes.Name = "BtnClearGroupBoxes"
-		Me.BtnClearGroupBoxes.Size = New System.Drawing.Size(295, 63)
+		Me.BtnClearGroupBoxes.Size = New System.Drawing.Size(258, 57)
 		Me.BtnClearGroupBoxes.TabIndex = 9
 		Me.BtnClearGroupBoxes.Text = "Clear"
 		Me.BtnClearGroupBoxes.UseVisualStyleBackColor = False
+		'
+		'BtnPrevious
+		'
+		Me.BtnPrevious.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(44, Byte), Integer), CType(CType(96, Byte), Integer))
+		Me.BtnPrevious.Font = New System.Drawing.Font("Arial", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+		Me.BtnPrevious.ForeColor = System.Drawing.Color.White
+		Me.BtnPrevious.Location = New System.Drawing.Point(881, 806)
+		Me.BtnPrevious.Name = "BtnPrevious"
+		Me.BtnPrevious.Size = New System.Drawing.Size(258, 51)
+		Me.BtnPrevious.TabIndex = 48
+		Me.BtnPrevious.Text = "Previous"
+		Me.BtnPrevious.UseVisualStyleBackColor = False
+		'
+		'BtnNext
+		'
+		Me.BtnNext.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(44, Byte), Integer), CType(CType(96, Byte), Integer))
+		Me.BtnNext.Font = New System.Drawing.Font("Arial", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+		Me.BtnNext.ForeColor = System.Drawing.Color.White
+		Me.BtnNext.Location = New System.Drawing.Point(1145, 806)
+		Me.BtnNext.Name = "BtnNext"
+		Me.BtnNext.Size = New System.Drawing.Size(269, 51)
+		Me.BtnNext.TabIndex = 49
+		Me.BtnNext.Text = "Next"
+		Me.BtnNext.UseVisualStyleBackColor = False
+		'
+		'BtnRefresh
+		'
+		Me.BtnRefresh.BackColor = System.Drawing.Color.DarkOrange
+		Me.BtnRefresh.Font = New System.Drawing.Font("Arial", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+		Me.BtnRefresh.Location = New System.Drawing.Point(1145, 743)
+		Me.BtnRefresh.Name = "BtnRefresh"
+		Me.BtnRefresh.Size = New System.Drawing.Size(269, 57)
+		Me.BtnRefresh.TabIndex = 50
+		Me.BtnRefresh.Text = "Refresh"
+		Me.BtnRefresh.UseVisualStyleBackColor = False
 		'
 		'DashboardForm
 		'
@@ -779,10 +834,13 @@ Partial Class DashboardForm
 		Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
 		Me.BackColor = System.Drawing.SystemColors.Control
 		Me.ClientSize = New System.Drawing.Size(1426, 869)
+		Me.Controls.Add(Me.BtnRefresh)
+		Me.Controls.Add(Me.BtnNext)
+		Me.Controls.Add(Me.BtnPrevious)
 		Me.Controls.Add(Me.BtnClearGroupBoxes)
 		Me.Controls.Add(Me.GroupBox2)
 		Me.Controls.Add(Me.GroupBox1)
-		Me.Controls.Add(Me.DataGridViewClients)
+		Me.Controls.Add(Me.ClientsGridView)
 		Me.Controls.Add(Me.PanelSearchBar)
 		Me.Controls.Add(Me.PanelSidebar)
 		Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
@@ -796,7 +854,7 @@ Partial Class DashboardForm
 		CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
 		Me.PanelSearchBar.ResumeLayout(False)
 		Me.PanelSearchBar.PerformLayout()
-		CType(Me.DataGridViewClients, System.ComponentModel.ISupportInitialize).EndInit()
+		CType(Me.ClientsGridView, System.ComponentModel.ISupportInitialize).EndInit()
 		Me.GroupBox1.ResumeLayout(False)
 		Me.TableLayoutPanel1.ResumeLayout(False)
 		Me.TableLayoutPanel1.PerformLayout()
@@ -818,7 +876,7 @@ Partial Class DashboardForm
 	Friend WithEvents PanelSearchBar As Panel
 	Friend WithEvents TxtSearchBar As TextBox
 	Friend WithEvents BtnExit As Button
-	Friend WithEvents DataGridViewClients As DataGridView
+	Friend WithEvents ClientsGridView As DataGridView
 	Friend WithEvents Label1 As Label
 	Friend WithEvents GroupBox1 As GroupBox
 	Friend WithEvents LblEmail As Label
@@ -860,6 +918,9 @@ Partial Class DashboardForm
 	Friend WithEvents Label3 As Label
 	Friend WithEvents Label5 As Label
 	Friend WithEvents Label7 As Label
-	Friend WithEvents BtnSettings As Button
+	Friend WithEvents BtnMyAccount As Button
 	Friend WithEvents BtnClearGroupBoxes As Button
+	Friend WithEvents BtnPrevious As Button
+	Friend WithEvents BtnNext As Button
+	Friend WithEvents BtnRefresh As Button
 End Class

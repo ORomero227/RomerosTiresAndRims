@@ -76,49 +76,49 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AboutForm.Designer.vb">
+    <Compile Include="Authentication\AboutForm.Designer.vb">
       <DependentUpon>AboutForm.vb</DependentUpon>
     </Compile>
-    <Compile Include="AboutForm.vb">
+    <Compile Include="Authentication\AboutForm.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Client.vb" />
-    <Compile Include="AddClientForm.Designer.vb">
+    <Compile Include="Models\Client.vb" />
+    <Compile Include="Dashboard\AddClientForm.Designer.vb">
       <DependentUpon>AddClientForm.vb</DependentUpon>
     </Compile>
-    <Compile Include="AddClientForm.vb">
+    <Compile Include="Dashboard\AddClientForm.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CreateSellerAccountForm.Designer.vb">
+    <Compile Include="Authentication\CreateSellerAccountForm.Designer.vb">
       <DependentUpon>CreateSellerAccountForm.vb</DependentUpon>
     </Compile>
-    <Compile Include="CreateSellerAccountForm.vb">
+    <Compile Include="Authentication\CreateSellerAccountForm.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EditClientForm.Designer.vb">
+    <Compile Include="Dashboard\EditClientForm.Designer.vb">
       <DependentUpon>EditClientForm.vb</DependentUpon>
     </Compile>
-    <Compile Include="EditClientForm.vb">
+    <Compile Include="Dashboard\EditClientForm.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CustomComboBox.Designer.vb">
+    <Compile Include="Custom Controllers\CustomComboBox.Designer.vb">
       <DependentUpon>CustomComboBox.vb</DependentUpon>
     </Compile>
-    <Compile Include="CustomComboBox.vb">
+    <Compile Include="Custom Controllers\CustomComboBox.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MyDataBase.vb" />
-    <Compile Include="DashboardForm.vb">
+    <Compile Include="Models\MyDataBase.vb" />
+    <Compile Include="Dashboard\DashboardForm.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DashboardForm.Designer.vb">
+    <Compile Include="Dashboard\DashboardForm.Designer.vb">
       <DependentUpon>DashboardForm.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LoginForm.Designer.vb">
+    <Compile Include="Authentication\LoginForm.Designer.vb">
       <DependentUpon>LoginForm.vb</DependentUpon>
     </Compile>
-    <Compile Include="LoginForm.vb">
+    <Compile Include="Authentication\LoginForm.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -137,26 +137,26 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="Seller.vb" />
-    <Compile Include="MyValidations.vb" />
+    <Compile Include="Models\Seller.vb" />
+    <Compile Include="Custom Validations\MyValidations.vb" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="AboutForm.resx">
+    <EmbeddedResource Include="Authentication\AboutForm.resx">
       <DependentUpon>AboutForm.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AddClientForm.resx">
+    <EmbeddedResource Include="Dashboard\AddClientForm.resx">
       <DependentUpon>AddClientForm.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CreateSellerAccountForm.resx">
+    <EmbeddedResource Include="Authentication\CreateSellerAccountForm.resx">
       <DependentUpon>CreateSellerAccountForm.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DashboardForm.resx">
+    <EmbeddedResource Include="Dashboard\DashboardForm.resx">
       <DependentUpon>DashboardForm.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EditClientForm.resx">
+    <EmbeddedResource Include="Dashboard\EditClientForm.resx">
       <DependentUpon>EditClientForm.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LoginForm.resx">
+    <EmbeddedResource Include="Authentication\LoginForm.resx">
       <DependentUpon>LoginForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
@@ -165,7 +165,7 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="CustomComboBox.resx">
+    <EmbeddedResource Include="Custom Controllers\CustomComboBox.resx">
       <DependentUpon>CustomComboBox.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
@@ -184,5 +184,6 @@
   <ItemGroup>
     <Content Include="Azul.ico" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
