@@ -2,6 +2,8 @@
 'Y00592812
 'Programa: Romero's Tires And Rims
 
+Imports ClosedXML.Excel
+
 Public Class DashboardForm
 
 	'Campos
@@ -11,6 +13,7 @@ Public Class DashboardForm
 	Private _myDatabase As New MyDataBase()
 	Private listOfClients As List(Of Client)
 	Private _currentRowIndex As Integer = 0
+	Private dataTable As New DataTable()
 
 	'Constructor Recibe el vendedor y el form de login
 	Public Sub New(seller As Seller, loginForm As LoginForm)
@@ -23,8 +26,8 @@ Public Class DashboardForm
 
 	'Carga el datagridview
 	Public Sub LoadClients()
-		'Esto es en caso de que se agregue o se elimine un cliente
-		ClientsGridView.Rows.Clear()
+		' Limpiar las filas del DataTable
+		dataTable.Rows.Clear()
 
 		'Vacio los labels de los groupbox
 		LblFullName.Text = ""
@@ -42,14 +45,35 @@ Public Class DashboardForm
 		'Obtiene los clientes del vendedor
 		listOfClients = _myDatabase.GetSellerClients(_seller)
 
+		'Agregar las columnas al datatable
+		If dataTable.Columns.Count = 0 Then
+			dataTable.Columns.Add("Client Id")
+			dataTable.Columns.Add("Firstname")
+			dataTable.Columns.Add("Paternal	Lastname")
+			dataTable.Columns.Add("Maternal Lastname")
+			dataTable.Columns.Add("Physical Address")
+			dataTable.Columns.Add("Mailing Address")
+			dataTable.Columns.Add("City")
+			dataTable.Columns.Add("Zipcode")
+			dataTable.Columns.Add("Birth Date")
+			dataTable.Columns.Add("Cellular Number")
+			dataTable.Columns.Add("Email")
+			dataTable.Columns.Add("Company Name")
+			dataTable.Columns.Add("Company City")
+			dataTable.Columns.Add("Client Fee")
+		End If
+
 		'Se llena la tabla
 		For Each client As Client In listOfClients
 
-			ClientsGridView.Rows.Add(client.ClientId, client.FirstName, client.PaternalLastName, client.MaternalLastName,
+			dataTable.Rows.Add(client.ClientId, client.FirstName, client.PaternalLastName, client.MaternalLastName,
 										 client.PhysicalAddress, client.MailingAddress, client.City, client.ZipCode,
 										 client.BirthDate.ToString("dd/MM/yyyy"), client.CellularNumber, client.Email,
 										 client.CompanyName, client.CompanyCity, client.ClientFee.ToString("c2"))
 		Next
+
+		'Asigno el datatable al datagrid
+		ClientsGridView.DataSource = dataTable
 	End Sub
 
 	'Cuando el form carga
@@ -91,19 +115,20 @@ Public Class DashboardForm
 
 	'Barra de busqueda
 	Private Sub TxtSearchBar_TextChanged(sender As Object, e As EventArgs) Handles TxtSearchBar.TextChanged
-		ClientsGridView.Rows.Clear() 'Vacio el datagrid
+		dataTable.Rows.Clear() 'Vacio el datatable
 
 		'Obtengo los clientes que coincidan con el searchbar
-		listOfClients = _myDatabase.SearchClient(TxtSearchBar.Text)
+		listOfClients = _myDatabase.SearchClient(TxtSearchBar.Text, _seller.SellerId)
 
 		'Si no coincide vacio el datagrid y cargo todos los clientes del vendedor
 		If listOfClients.Count = 0 Then
-			ClientsGridView.Rows.Clear()
+			dataTable.Rows.Clear()
 			listOfClients = _myDatabase.GetSellerClients(_seller)
 		End If
 
+		'LLeno las filas con los valores del cliente
 		For Each client As Client In listOfClients
-			ClientsGridView.Rows.Add(
+			dataTable.Rows.Add(
 					client.ClientId, client.FirstName, client.PaternalLastName,
 					client.MaternalLastName, client.PhysicalAddress,
 					client.MailingAddress, client.City, client.ZipCode,
@@ -137,17 +162,17 @@ Public Class DashboardForm
 			ClientsGridView.Rows(_currentRowIndex).Selected = True
 
 			'Se asignan los valores de las columnas a las variabless
-			Dim fullName As String = $"{selectedRow.Cells("FirstName").Value.ToString()} {selectedRow.Cells("PaternalLastName").Value.ToString()} {selectedRow.Cells("MaternalLastname").Value.ToString()}"
-			Dim phyAddress As String = selectedRow.Cells("PhysicalAddress").Value.ToString()
-			Dim mailingAddress As String = selectedRow.Cells("MailingAddress").Value.ToString()
+			Dim fullName As String = $"{selectedRow.Cells(1).Value.ToString()} {selectedRow.Cells(2).Value.ToString()} {selectedRow.Cells(3).Value.ToString()}"
+			Dim phyAddress As String = selectedRow.Cells("Physical Address").Value.ToString()
+			Dim mailingAddress As String = selectedRow.Cells("Mailing Address").Value.ToString()
 			Dim city As String = selectedRow.Cells("City").Value.ToString()
 			Dim zipCode As String = selectedRow.Cells("Zipcode").Value.ToString()
-			Dim birth As String = selectedRow.Cells("BirthDate").Value.ToString()
-			Dim cellNum As String = selectedRow.Cells("CellularNumber").Value.ToString()
+			Dim birth As String = selectedRow.Cells("Birth Date").Value.ToString()
+			Dim cellNum As String = selectedRow.Cells("Cellular Number").Value.ToString()
 			Dim email As String = selectedRow.Cells("Email").Value.ToString()
-			Dim companyName As String = selectedRow.Cells("CompanyName").Value.ToString()
-			Dim companyCity As String = selectedRow.Cells("CompanyCity").Value.ToString()
-			Dim clientFee As Double = CDbl(selectedRow.Cells("ClientFee").Value)
+			Dim companyName As String = selectedRow.Cells("Company Name").Value.ToString()
+			Dim companyCity As String = selectedRow.Cells("Company City").Value.ToString()
+			Dim clientFee As Double = CDbl(selectedRow.Cells("Client Fee").Value)
 
 			'GroupBox de client info
 			LblFullName.Text = fullName
@@ -192,9 +217,13 @@ Public Class DashboardForm
 			_currentRowIndex -= 1
 		End If
 
-		Dim updateRow As DataGridViewRow = ClientsGridView.Rows(_currentRowIndex)
+		If ClientsGridView.RowCount > 0 Then
+			Dim updateRow As DataGridViewRow = ClientsGridView.Rows(_currentRowIndex)
 
-		ShowCurrentRow(updateRow)
+			ShowCurrentRow(updateRow)
+		Else
+			MessageBox.Show("No clients to view")
+		End If
 	End Sub
 
 	'Boton para siguiente selecciion de la fila en la tabla
@@ -203,9 +232,13 @@ Public Class DashboardForm
 			_currentRowIndex += 1
 		End If
 
-		Dim updateRow As DataGridViewRow = ClientsGridView.Rows(_currentRowIndex)
+		If ClientsGridView.RowCount > 0 Then
+			Dim updateRow As DataGridViewRow = ClientsGridView.Rows(_currentRowIndex)
 
-		ShowCurrentRow(updateRow)
+			ShowCurrentRow(updateRow)
+		Else
+			MessageBox.Show("No clients to view")
+		End If
 	End Sub
 
 	'Cuando se selecciona una celda por medio de un click
@@ -223,7 +256,57 @@ Public Class DashboardForm
 	'Boton para actualizar los groupbox
 	Private Sub BtnRefresh_Click(sender As Object, e As EventArgs) Handles BtnRefresh.Click
 
-		Dim refreshCurrentRow As DataGridViewRow = ClientsGridView.Rows(_currentRowIndex)
-		ShowCurrentRow(refreshCurrentRow)
+		If ClientsGridView.RowCount > 0 Then
+			Dim refreshCurrentRow As DataGridViewRow = ClientsGridView.Rows(_currentRowIndex)
+			ShowCurrentRow(refreshCurrentRow)
+		Else
+			MessageBox.Show("No clients to view")
+		End If
+	End Sub
+
+	'Boton para exportar a un archivo excel
+	Private Sub Btn_ExportExcel_Click(sender As Object, e As EventArgs) Handles Btn_ExportExcel.Click
+		'Creo un save dialog que guarde documentos xlsx
+		Using sfd As SaveFileDialog = New SaveFileDialog() With {.Filter = "Excel Workbook|*.xlsx"}
+			'Muestro el save dialog
+			If sfd.ShowDialog() = DialogResult.OK Then
+				Try
+					'Inicializo un libro de trabajo de Excel
+					Using workbook As XLWorkbook = New XLWorkbook()
+
+						'Una tabla temporar que se encarga de guardar los valores del datagrid
+						Dim datatable As New DataTable()
+
+						'Paso todas las columnas del data grid al datatable
+						For Each col As DataGridViewColumn In ClientsGridView.Columns
+							datatable.Columns.Add(col.Name)
+						Next
+
+						'Paso todas las filas al datatable
+						For Each row As DataGridViewRow In ClientsGridView.Rows
+							Dim dataRow As DataRow = datatable.NewRow()
+							For Each column As DataGridViewColumn In ClientsGridView.Columns
+								dataRow(column.Name) = row.Cells(column.Index).Value
+							Next
+							datatable.Rows.Add(dataRow)
+						Next
+
+						' Agregar el DataTable al libro de trabajo
+						Dim worksheet = workbook.Worksheets.Add(datatable, "Clients")
+
+						'Ajusto el ancho de la columna en excel
+						worksheet.Columns().AdjustToContents()
+
+						' Guardar el archivo Excel
+						workbook.SaveAs(sfd.FileName)
+
+						MessageBox.Show("Successful export to Excel.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
+					End Using
+				Catch ex As Exception
+					MessageBox.Show("An error occurred while exporting to Excel:" & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+				End Try
+			End If
+		End Using
 	End Sub
 End Class

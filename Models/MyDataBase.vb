@@ -3,6 +3,7 @@
 'Programa: Romero's Tires And Rims
 
 Imports System.Data.SqlClient
+Imports System.IO
 Imports System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel
 
 Public Class MyDataBase
@@ -10,6 +11,7 @@ Public Class MyDataBase
 	Private ReadOnly _connectionString As String = "Data Source=OSCARLAPTOP\SQLOSCAR1;Initial Catalog=RomerosTiresAndRimsDB;User Id=sa; Password=oscarpr12"
 	Private _seller As Seller
 	Private _client As Client
+	Private database_log As StreamWriter
 
 	'Obtiene los emails que ya han sido registrados
 	Public ReadOnly Property ListOfEmails As List(Of String)
@@ -468,12 +470,12 @@ Public Class MyDataBase
 	End Function
 
 	'Buscador de cliente
-	Public Function SearchClient(fullName As String) As List(Of Client)
+	Public Function SearchClient(fullName As String, sellerId As Guid) As List(Of Client)
 		Dim clients As New List(Of Client)
 		Dim query As String = "SELECT *
 							   FROM tblClients
 							   WHERE (FirstName + ' ' + Paternal_LastName + ' ' + Maternal_Lastname)
-							   LIKE @FullName"
+							   LIKE @FullName AND tblClients.Seller_Id = @Seller_Id"
 
 
 		Using _myConnection As New SqlConnection(_connectionString)
@@ -484,6 +486,7 @@ Public Class MyDataBase
 				Using command As New SqlCommand(query, _myConnection)
 
 					command.Parameters.AddWithValue("@FullName", "%" & fullName & "%")
+					command.Parameters.AddWithValue("@Seller_Id", sellerId)
 
 					Dim reader As SqlDataReader = command.ExecuteReader()
 

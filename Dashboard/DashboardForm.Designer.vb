@@ -23,12 +23,12 @@ Partial Class DashboardForm
 	<System.Diagnostics.DebuggerStepThrough()>
 	Private Sub InitializeComponent()
 		Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(DashboardForm))
-		Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-		Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-		Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-		Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+		Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+		Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+		Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+		Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
 		Me.PanelSidebar = New System.Windows.Forms.Panel()
-		Me.BtnMyAccount = New System.Windows.Forms.Button()
+		Me.Btn_ExportExcel = New System.Windows.Forms.Button()
 		Me.BtnDeleteClient = New System.Windows.Forms.Button()
 		Me.BtnEditClient = New System.Windows.Forms.Button()
 		Me.BtnAddClient = New System.Windows.Forms.Button()
@@ -41,20 +41,6 @@ Partial Class DashboardForm
 		Me.TxtSearchBar = New System.Windows.Forms.TextBox()
 		Me.Label1 = New System.Windows.Forms.Label()
 		Me.ClientsGridView = New System.Windows.Forms.DataGridView()
-		Me.ClientId = New System.Windows.Forms.DataGridViewTextBoxColumn()
-		Me.FirstName = New System.Windows.Forms.DataGridViewTextBoxColumn()
-		Me.PaternalLastname = New System.Windows.Forms.DataGridViewTextBoxColumn()
-		Me.MaternalLastname = New System.Windows.Forms.DataGridViewTextBoxColumn()
-		Me.PhysicalAddress = New System.Windows.Forms.DataGridViewTextBoxColumn()
-		Me.MailingAddress = New System.Windows.Forms.DataGridViewTextBoxColumn()
-		Me.City = New System.Windows.Forms.DataGridViewTextBoxColumn()
-		Me.Zipcode = New System.Windows.Forms.DataGridViewTextBoxColumn()
-		Me.BirthDate = New System.Windows.Forms.DataGridViewTextBoxColumn()
-		Me.CellularNumber = New System.Windows.Forms.DataGridViewTextBoxColumn()
-		Me.Email = New System.Windows.Forms.DataGridViewTextBoxColumn()
-		Me.CompanyName = New System.Windows.Forms.DataGridViewTextBoxColumn()
-		Me.CompanyCity = New System.Windows.Forms.DataGridViewTextBoxColumn()
-		Me.ClientFee = New System.Windows.Forms.DataGridViewTextBoxColumn()
 		Me.GroupBox1 = New System.Windows.Forms.GroupBox()
 		Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
 		Me.LblFullName = New System.Windows.Forms.Label()
@@ -100,7 +86,7 @@ Partial Class DashboardForm
 		'PanelSidebar
 		'
 		Me.PanelSidebar.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(44, Byte), Integer), CType(CType(96, Byte), Integer))
-		Me.PanelSidebar.Controls.Add(Me.BtnMyAccount)
+		Me.PanelSidebar.Controls.Add(Me.Btn_ExportExcel)
 		Me.PanelSidebar.Controls.Add(Me.BtnDeleteClient)
 		Me.PanelSidebar.Controls.Add(Me.BtnEditClient)
 		Me.PanelSidebar.Controls.Add(Me.BtnAddClient)
@@ -112,21 +98,23 @@ Partial Class DashboardForm
 		Me.PanelSidebar.Size = New System.Drawing.Size(305, 869)
 		Me.PanelSidebar.TabIndex = 0
 		'
-		'BtnMyAccount
+		'Btn_ExportExcel
 		'
-		Me.BtnMyAccount.BackColor = System.Drawing.Color.Transparent
-		Me.BtnMyAccount.Dock = System.Windows.Forms.DockStyle.Bottom
-		Me.BtnMyAccount.FlatAppearance.BorderSize = 0
-		Me.BtnMyAccount.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gold
-		Me.BtnMyAccount.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-		Me.BtnMyAccount.Font = New System.Drawing.Font("Arial", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.BtnMyAccount.ForeColor = System.Drawing.Color.White
-		Me.BtnMyAccount.Location = New System.Drawing.Point(0, 823)
-		Me.BtnMyAccount.Name = "BtnMyAccount"
-		Me.BtnMyAccount.Size = New System.Drawing.Size(305, 46)
-		Me.BtnMyAccount.TabIndex = 5
-		Me.BtnMyAccount.Text = "My Account"
-		Me.BtnMyAccount.UseVisualStyleBackColor = False
+		Me.Btn_ExportExcel.BackColor = System.Drawing.Color.Transparent
+		Me.Btn_ExportExcel.Dock = System.Windows.Forms.DockStyle.Top
+		Me.Btn_ExportExcel.FlatAppearance.BorderSize = 0
+		Me.Btn_ExportExcel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue
+		Me.Btn_ExportExcel.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+		Me.Btn_ExportExcel.Font = New System.Drawing.Font("Arial", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+		Me.Btn_ExportExcel.ForeColor = System.Drawing.Color.White
+		Me.Btn_ExportExcel.Image = CType(resources.GetObject("Btn_ExportExcel.Image"), System.Drawing.Image)
+		Me.Btn_ExportExcel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+		Me.Btn_ExportExcel.Location = New System.Drawing.Point(0, 319)
+		Me.Btn_ExportExcel.Name = "Btn_ExportExcel"
+		Me.Btn_ExportExcel.Size = New System.Drawing.Size(305, 46)
+		Me.Btn_ExportExcel.TabIndex = 6
+		Me.Btn_ExportExcel.Text = "Export to Excel"
+		Me.Btn_ExportExcel.UseVisualStyleBackColor = False
 		'
 		'BtnDeleteClient
 		'
@@ -137,6 +125,8 @@ Partial Class DashboardForm
 		Me.BtnDeleteClient.FlatStyle = System.Windows.Forms.FlatStyle.Flat
 		Me.BtnDeleteClient.Font = New System.Drawing.Font("Arial", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
 		Me.BtnDeleteClient.ForeColor = System.Drawing.Color.White
+		Me.BtnDeleteClient.Image = CType(resources.GetObject("BtnDeleteClient.Image"), System.Drawing.Image)
+		Me.BtnDeleteClient.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
 		Me.BtnDeleteClient.Location = New System.Drawing.Point(0, 273)
 		Me.BtnDeleteClient.Name = "BtnDeleteClient"
 		Me.BtnDeleteClient.Size = New System.Drawing.Size(305, 46)
@@ -153,6 +143,8 @@ Partial Class DashboardForm
 		Me.BtnEditClient.FlatStyle = System.Windows.Forms.FlatStyle.Flat
 		Me.BtnEditClient.Font = New System.Drawing.Font("Arial", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
 		Me.BtnEditClient.ForeColor = System.Drawing.Color.White
+		Me.BtnEditClient.Image = CType(resources.GetObject("BtnEditClient.Image"), System.Drawing.Image)
+		Me.BtnEditClient.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
 		Me.BtnEditClient.Location = New System.Drawing.Point(0, 227)
 		Me.BtnEditClient.Name = "BtnEditClient"
 		Me.BtnEditClient.Size = New System.Drawing.Size(305, 46)
@@ -169,6 +161,8 @@ Partial Class DashboardForm
 		Me.BtnAddClient.FlatStyle = System.Windows.Forms.FlatStyle.Flat
 		Me.BtnAddClient.Font = New System.Drawing.Font("Arial", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
 		Me.BtnAddClient.ForeColor = System.Drawing.Color.White
+		Me.BtnAddClient.Image = CType(resources.GetObject("BtnAddClient.Image"), System.Drawing.Image)
+		Me.BtnAddClient.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
 		Me.BtnAddClient.Location = New System.Drawing.Point(0, 181)
 		Me.BtnAddClient.Name = "BtnAddClient"
 		Me.BtnAddClient.Size = New System.Drawing.Size(305, 46)
@@ -278,164 +272,51 @@ Partial Class DashboardForm
 		Me.ClientsGridView.BorderStyle = System.Windows.Forms.BorderStyle.None
 		Me.ClientsGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
 		Me.ClientsGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-		DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter
-		DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(44, Byte), Integer), CType(CType(96, Byte), Integer))
-		DataGridViewCellStyle1.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		DataGridViewCellStyle1.ForeColor = System.Drawing.Color.White
-		DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
-		DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-		DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-		Me.ClientsGridView.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+		DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter
+		DataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(44, Byte), Integer), CType(CType(96, Byte), Integer))
+		DataGridViewCellStyle5.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+		DataGridViewCellStyle5.ForeColor = System.Drawing.Color.White
+		DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
+		DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+		DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+		Me.ClientsGridView.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
 		Me.ClientsGridView.ColumnHeadersHeight = 40
 		Me.ClientsGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
-		Me.ClientsGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ClientId, Me.FirstName, Me.PaternalLastname, Me.MaternalLastname, Me.PhysicalAddress, Me.MailingAddress, Me.City, Me.Zipcode, Me.BirthDate, Me.CellularNumber, Me.Email, Me.CompanyName, Me.CompanyCity, Me.ClientFee})
-		DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-		DataGridViewCellStyle2.BackColor = System.Drawing.Color.White
-		DataGridViewCellStyle2.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
-		DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-		DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-		DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-		Me.ClientsGridView.DefaultCellStyle = DataGridViewCellStyle2
+		DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+		DataGridViewCellStyle6.BackColor = System.Drawing.Color.White
+		DataGridViewCellStyle6.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+		DataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText
+		DataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight
+		DataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+		DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+		Me.ClientsGridView.DefaultCellStyle = DataGridViewCellStyle6
 		Me.ClientsGridView.EnableHeadersVisualStyles = False
 		Me.ClientsGridView.GridColor = System.Drawing.Color.SteelBlue
 		Me.ClientsGridView.Location = New System.Drawing.Point(323, 79)
 		Me.ClientsGridView.Name = "ClientsGridView"
 		Me.ClientsGridView.ReadOnly = True
 		Me.ClientsGridView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-		DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-		DataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(66, Byte), Integer), CType(CType(91, Byte), Integer))
-		DataGridViewCellStyle3.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		DataGridViewCellStyle3.ForeColor = System.Drawing.Color.White
-		DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
-		DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-		DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-		Me.ClientsGridView.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
+		DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+		DataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(66, Byte), Integer), CType(CType(91, Byte), Integer))
+		DataGridViewCellStyle7.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+		DataGridViewCellStyle7.ForeColor = System.Drawing.Color.White
+		DataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight
+		DataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+		DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+		Me.ClientsGridView.RowHeadersDefaultCellStyle = DataGridViewCellStyle7
 		Me.ClientsGridView.RowHeadersVisible = False
 		Me.ClientsGridView.RowHeadersWidth = 51
 		Me.ClientsGridView.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing
-		DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-		DataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(66, Byte), Integer), CType(CType(91, Byte), Integer))
-		DataGridViewCellStyle4.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		DataGridViewCellStyle4.ForeColor = System.Drawing.Color.White
-		DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
-		Me.ClientsGridView.RowsDefaultCellStyle = DataGridViewCellStyle4
+		DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+		DataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(66, Byte), Integer), CType(CType(91, Byte), Integer))
+		DataGridViewCellStyle8.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+		DataGridViewCellStyle8.ForeColor = System.Drawing.Color.White
+		DataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight
+		Me.ClientsGridView.RowsDefaultCellStyle = DataGridViewCellStyle8
 		Me.ClientsGridView.RowTemplate.Height = 24
 		Me.ClientsGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
 		Me.ClientsGridView.Size = New System.Drawing.Size(1091, 391)
 		Me.ClientsGridView.TabIndex = 45
-		'
-		'ClientId
-		'
-		Me.ClientId.HeaderText = "Client #"
-		Me.ClientId.MinimumWidth = 6
-		Me.ClientId.Name = "ClientId"
-		Me.ClientId.ReadOnly = True
-		Me.ClientId.Width = 125
-		'
-		'FirstName
-		'
-		Me.FirstName.HeaderText = "Firstname"
-		Me.FirstName.MinimumWidth = 6
-		Me.FirstName.Name = "FirstName"
-		Me.FirstName.ReadOnly = True
-		Me.FirstName.Width = 125
-		'
-		'PaternalLastname
-		'
-		Me.PaternalLastname.HeaderText = "Paternal Lastname"
-		Me.PaternalLastname.MinimumWidth = 6
-		Me.PaternalLastname.Name = "PaternalLastname"
-		Me.PaternalLastname.ReadOnly = True
-		Me.PaternalLastname.Width = 125
-		'
-		'MaternalLastname
-		'
-		Me.MaternalLastname.HeaderText = "Maternal Lastname"
-		Me.MaternalLastname.MinimumWidth = 6
-		Me.MaternalLastname.Name = "MaternalLastname"
-		Me.MaternalLastname.ReadOnly = True
-		Me.MaternalLastname.Width = 125
-		'
-		'PhysicalAddress
-		'
-		Me.PhysicalAddress.HeaderText = "Physical Address"
-		Me.PhysicalAddress.MinimumWidth = 6
-		Me.PhysicalAddress.Name = "PhysicalAddress"
-		Me.PhysicalAddress.ReadOnly = True
-		Me.PhysicalAddress.Width = 125
-		'
-		'MailingAddress
-		'
-		Me.MailingAddress.HeaderText = "Mailing Address"
-		Me.MailingAddress.MinimumWidth = 6
-		Me.MailingAddress.Name = "MailingAddress"
-		Me.MailingAddress.ReadOnly = True
-		Me.MailingAddress.Width = 125
-		'
-		'City
-		'
-		Me.City.HeaderText = "City"
-		Me.City.MinimumWidth = 6
-		Me.City.Name = "City"
-		Me.City.ReadOnly = True
-		Me.City.Width = 125
-		'
-		'Zipcode
-		'
-		Me.Zipcode.HeaderText = "Zipcode"
-		Me.Zipcode.MinimumWidth = 6
-		Me.Zipcode.Name = "Zipcode"
-		Me.Zipcode.ReadOnly = True
-		Me.Zipcode.Width = 125
-		'
-		'BirthDate
-		'
-		Me.BirthDate.HeaderText = "Birth Date"
-		Me.BirthDate.MinimumWidth = 6
-		Me.BirthDate.Name = "BirthDate"
-		Me.BirthDate.ReadOnly = True
-		Me.BirthDate.Width = 125
-		'
-		'CellularNumber
-		'
-		Me.CellularNumber.HeaderText = "Cellular Number"
-		Me.CellularNumber.MinimumWidth = 6
-		Me.CellularNumber.Name = "CellularNumber"
-		Me.CellularNumber.ReadOnly = True
-		Me.CellularNumber.Width = 125
-		'
-		'Email
-		'
-		Me.Email.HeaderText = "Email"
-		Me.Email.MinimumWidth = 6
-		Me.Email.Name = "Email"
-		Me.Email.ReadOnly = True
-		Me.Email.Width = 125
-		'
-		'CompanyName
-		'
-		Me.CompanyName.HeaderText = "Company Name"
-		Me.CompanyName.MinimumWidth = 6
-		Me.CompanyName.Name = "CompanyName"
-		Me.CompanyName.ReadOnly = True
-		Me.CompanyName.Width = 125
-		'
-		'CompanyCity
-		'
-		Me.CompanyCity.HeaderText = "Company City"
-		Me.CompanyCity.MinimumWidth = 6
-		Me.CompanyCity.Name = "CompanyCity"
-		Me.CompanyCity.ReadOnly = True
-		Me.CompanyCity.Width = 125
-		'
-		'ClientFee
-		'
-		Me.ClientFee.HeaderText = "Client Fee"
-		Me.ClientFee.MinimumWidth = 6
-		Me.ClientFee.Name = "ClientFee"
-		Me.ClientFee.ReadOnly = True
-		Me.ClientFee.Width = 125
 		'
 		'GroupBox1
 		'
@@ -893,20 +774,6 @@ Partial Class DashboardForm
 	Friend WithEvents LblClientFee As Label
 	Friend WithEvents LblCompanyCity As Label
 	Friend WithEvents LblCompanyName As Label
-	Friend WithEvents ClientId As DataGridViewTextBoxColumn
-	Friend WithEvents FirstName As DataGridViewTextBoxColumn
-	Friend WithEvents PaternalLastname As DataGridViewTextBoxColumn
-	Friend WithEvents MaternalLastname As DataGridViewTextBoxColumn
-	Friend WithEvents PhysicalAddress As DataGridViewTextBoxColumn
-	Friend WithEvents MailingAddress As DataGridViewTextBoxColumn
-	Friend WithEvents City As DataGridViewTextBoxColumn
-	Friend WithEvents Zipcode As DataGridViewTextBoxColumn
-	Friend WithEvents BirthDate As DataGridViewTextBoxColumn
-	Friend WithEvents CellularNumber As DataGridViewTextBoxColumn
-	Friend WithEvents Email As DataGridViewTextBoxColumn
-	Friend WithEvents CompanyName As DataGridViewTextBoxColumn
-	Friend WithEvents CompanyCity As DataGridViewTextBoxColumn
-	Friend WithEvents ClientFee As DataGridViewTextBoxColumn
 	Friend WithEvents Label2 As Label
 	Friend WithEvents Label4 As Label
 	Friend WithEvents Label6 As Label
@@ -918,9 +785,9 @@ Partial Class DashboardForm
 	Friend WithEvents Label3 As Label
 	Friend WithEvents Label5 As Label
 	Friend WithEvents Label7 As Label
-	Friend WithEvents BtnMyAccount As Button
 	Friend WithEvents BtnClearGroupBoxes As Button
 	Friend WithEvents BtnPrevious As Button
 	Friend WithEvents BtnNext As Button
 	Friend WithEvents BtnRefresh As Button
+	Friend WithEvents Btn_ExportExcel As Button
 End Class
