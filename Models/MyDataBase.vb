@@ -3,15 +3,13 @@
 'Programa: Romero's Tires And Rims
 
 Imports System.Data.SqlClient
-Imports System.IO
-Imports System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel
 
 Public Class MyDataBase
 	'Campos
-	Private ReadOnly _connectionString As String = "Data Source=OSCARLAPTOP\SQLOSCAR1;Initial Catalog=RomerosTiresAndRimsDB;User Id=sa; Password=oscarpr12"
+
+	Private ReadOnly _connectionString As String = Environment.GetEnvironmentVariable("RomeroTiresAndRimsDBString")
 	Private _seller As Seller
 	Private _client As Client
-	Private database_log As StreamWriter
 
 	'Obtiene los emails que ya han sido registrados
 	Public ReadOnly Property ListOfEmails As List(Of String)
