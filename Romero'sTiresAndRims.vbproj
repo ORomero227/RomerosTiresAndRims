@@ -205,7 +205,7 @@
     <Compile Include="Custom Controllers\CustomComboBox.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Models\MyDataBase.vb" />
+    <Compile Include="Database Config\MyDataBase.vb" />
     <Compile Include="Dashboard\DashboardForm.vb">
       <SubType>Form</SubType>
     </Compile>
