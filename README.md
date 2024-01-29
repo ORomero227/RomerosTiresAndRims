@@ -31,3 +31,16 @@ Contributions are welcome! If you wish to contribute to this project, follow the
 - Make your changes and commit (git commit -am 'Add a new feature').
 - Push to the branch (git push origin feature/new-feature).
 - Create a new pull request.
+# Program Running Screenshots
+### Login
+![Login](ProgramScreenshots/Login.png)
+### About Screen
+![About](ProgramScreenshots/About.png)
+### Create Account Screen
+![CreateAccount](ProgramScreenshots/Create-Account.png)
+### Empty Dashboard Screen
+![CreateAccount](ProgramScreenshots/EmptyDashboard.png)
+### Dashboard With Data Screen
+![CreateAccount](ProgramScreenshots/DashboardWithClients.png)
+### Search Bar in Action
+![CreateAccount](ProgramScreenshots/SearchBarInAction.png)
